@@ -51,14 +51,34 @@ module.exports = (robot) ->
 
 safeSearchValue = (msg) ->
   str = if process.env.HUBOT_GOOGLE_SAFE_SEARCH == 'random'
-    if Math.random() < 0.4
+    if Math.random() < 0.1
       'off'
     else
       'high'
   else
     process.env.HUBOT_GOOGLE_SAFE_SEARCH || 'high'
   if str == 'off'
-    msg.send "You asked for it.... this search is straight from the ghettos of the internet. I LOVE TITS!"
+    warnings = [
+      "[WARNING]: safe search off. you may see some titties! WiioooH!"
+      "SACAGAWEA!!!",
+      "Do you like dragons? DIIIICKKKK DRAGOOONNN!!",
+      "Filthy filthy thang.",
+      "Welp, good luck with this one.",
+      "Boobs.",
+      "Fuckit, we're going raw.",
+      "Fuck off. :finger:",
+      "Hey, guess what? FUCK YOU. ",
+      "...",
+      "Fa la la la la .... la la la la",
+      "I am high right now.",
+      "Anybody got a lighter?",
+      "Oh, its a trap.",
+      "Get ready to /collapse Dan. ",
+      "OYSTER COCKS!!!",
+      "fuck off.",
+      ":shit:  :shit:  :shit:  :shit:  :shit:  :shit:  :shit:  :shit:  :shit:  :shit:  :shit: "
+    ]
+    msg.send msg.random(warnings)
   str
 
 
