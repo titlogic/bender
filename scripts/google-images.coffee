@@ -109,7 +109,8 @@ safeSearchValue = (msg) ->
       "Chris is going to like this one",
       "Hey guess what? NVM, I forgot. I am sure it was stupid anyway. Here is your stupid image. ",
       "how about this. How about you image me a random picture",
-      "how about this. How about you image me a robot dying"
+      "how about this. How about you image me a robot dying",
+      "Da whistles go wooooooo!!!! woo woooooo!!!!"
     ]
 
     msg.send msg.random(warnings)
