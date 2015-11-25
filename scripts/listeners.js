@@ -7,10 +7,10 @@ module.exports = function(robot) {
       return msg.send(msg.random(response));
     }
   });
-  return robot.hear(/(tits)/i, function(msg) {
+  return robot.hear(/(tits|I approve)/i, function(msg) {
     var response;
     response = ["did someone say tits?", "TITS! ", "Woohoo!!! ... tits. ", "tits!", "tits!", "tits!", "tits! image me boobies", "woohoo! tits! animate me boobies", "Boobies!"];
-    if (Math.random() < 0.95) {
+    if (Math.random() < 0.8) {
       return msg.send(msg.random(response));
     }
   });
