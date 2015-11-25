@@ -15,7 +15,7 @@ module.exports = (robot) ->
       msg.send msg.random response
 
 
-  robot.hear /(tits)/i, (msg) ->
+  robot.hear /(tits|I approve)/i, (msg) ->
     response = [
       "did someone say tits?",
       "TITS! ",
@@ -27,5 +27,5 @@ module.exports = (robot) ->
       "woohoo! tits! animate me boobies"
       "Boobies!"
     ]
-    if Math.random() < 0.95
+    if Math.random() < 0.8
       msg.send msg.random response
