@@ -22,9 +22,11 @@ module.exports = (robot) ->
       "I may be a bot but I do love tits.",
       "tits! image me boobies",
       "woohoo! tits! animate me boobies",
-      "Boobies!"
+      "Boobies!",
+      ":tits:",
+      ":ass:"
     ]
-    if Math.random() < 0.8
+    if Math.random() < 0.9
       msg.send msg.random response
 
 
