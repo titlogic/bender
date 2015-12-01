@@ -20,7 +20,7 @@ module.exports = (robot) ->
       "TITS! ",
       "Woohoo!!! ... tits. ",
       "I may be a bot but I do love tits.",
-      "tits! image me boobies",
+      "@bender: image me boobies",
       "woohoo! tits! animate me boobies",
       "Boobies!",
       ":tits:",
@@ -50,4 +50,3 @@ module.exports = (robot) ->
       "tits."
     ]
     msg.send msg.random response
-
