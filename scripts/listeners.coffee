@@ -39,13 +39,12 @@ module.exports = (robot) ->
       msg.send msg.random response
 
 
-  robot.hear /(wioo+h)/i, (msg) ->
+  robot.hear /(wi+oo+h)/i, (msg) ->
     response = [
       "https://images.rapgenius.com/f0a9c81851ac310f1e8a745173b17126.500x373x17.gif",
       "WIOOOH!!!!",
       "https://s-media-cache-ak0.pinimg.com/736x/86/a3/c8/86a3c846b0ecdc82f1c86fb305239ead.jpg",
       "tits."
     ]
-    if Math.random() < 0.5
-      msg.send msg.random response
+    msg.send msg.random response
 
