@@ -9,7 +9,7 @@ module.exports = function(robot) {
   });
   robot.hear(/(tits|I approve)/i, function(msg) {
     var response;
-    response = ["did someone say tits?", "TITS! ", "Woohoo!!! ... tits. ", "I may be a bot but I do love tits.", "tits! image me boobies", "woohoo! tits! animate me boobies", "Boobies!", ":tits:", ":ass:"];
+    response = ["did someone say tits?", "TITS! ", "Woohoo!!! ... tits. ", "I may be a bot but I do love tits.", "tits! image me boobies", "woohoo! tits! animate me boobies", "Boobies!", ":tits:", ":ass:", ":eggplant: :fist: :sweat_drops: :open_mouth:"];
     if (Math.random() < 0.9) {
       return msg.send(msg.random(response));
     }
