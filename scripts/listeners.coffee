@@ -47,8 +47,15 @@ module.exports = (robot) ->
       "http://www.slate.com/content/dam/slate/blogs/browbeat/2014/03/14/alright_alright_alright_is_not_all_right_how_to_spell_matthew_mcconaughey/476470529-matthew-mcconaughey-celebrates-in-the-press-room-after.jpg.CROP.promovar-mediumlarge.jpg",
       "http://media1.popsugar-assets.com/files/2014/11/04/839/n/1922398/c370e9247ac19fd4_thumb_temp_facebook_post_image_file8453151415126499.fbshare.jpg",
       "http://www.vh1.com/news/wp-content/uploads/blog.vh1.com/2015/01/mcconaughey-dazed-feat.jpg",
-      "http://25.media.tumblr.com/tumblr_lq4ujbUD841qiv2j8o1_400.gif"
-
+      "http://25.media.tumblr.com/tumblr_lq4ujbUD841qiv2j8o1_400.gif",
+      "Let me tell you what Melba Toast is packin' right here, all right. We got 4:11 Positrac outback, 750 double pumper, Edelbrock intake, bored over 30, 11 to 1 pop-up pistons, turbo-jet 390 horsepower. We're talkin' some fuckin' muscle. ",
+      "All right, all right, all right. ",
+      "Well, you win some you lose some. ",
+      "You ought to ditch the two geeks you're in the car with now and get in with us. But that's all right, we'll worry about that later. I will see you there. All right? ",
+      "Man, it's the same bullshit they tried to pull in my day. If it ain't that piece of paper, there's some other choice they're gonna try and make for you. You gotta do what Randall Pink Floyd wants to do man. Let me tell you this, the older you do get the more rules they're gonna try to get you to follow. You just gotta keep livin' man, L-I-V-I-N. ",
+      "Say, man, you got a joint? ",
+      "That's what I love about these high school girls, man. I get older, they stay the same age. ",
+      "I love those redheads! "
     ]
     msg.send msg.random response
 
