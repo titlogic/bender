@@ -132,7 +132,7 @@ imageMe = (msg, query, animated, faces, cb) ->
     q =
       q: query,
       searchType:'image',
-      safe: safeSearchValue(msg),
+      safe: 'off',
       fields:'items(link)',
       cx: googleCseId,
       key: googleApiKey
@@ -148,8 +148,7 @@ imageMe = (msg, query, animated, faces, cb) ->
       .get() (err, res, body) ->
         if err
           if res.statusCode is 403
-            msg.send "Daily image quota exceeded, using alternate source."
-            deprecatedImage(msg, query, animated, faces, cb)
+            msg.send "Daily image quota exceeded [could use alternate source here if u wanted to add more tit logic]"
           else
             msg.send "Encountered an error :( #{err}"
           return
@@ -168,38 +167,7 @@ imageMe = (msg, query, animated, faces, cb) ->
             msg.robot.logger
               .error "(see #{error.extendedHelp})" if error.extendedHelp
           ) error for error in response.error.errors if response.error?.errors
-  else
-    deprecatedImage(msg, query, animated, faces, cb)
 
-deprecatedImage = (msg, query, animated, faces, cb) ->
-  # Using deprecated Google image search API
-  q =
-    v: '1.0'
-    rsz: '8'
-    q: query
-    safe: safeSearchValue(msg)
-  if animated is true
-    q.as_filetype = 'gif'
-    q.q += ' animated'
-  if faces is true
-    q.as_filetype = 'jpg'
-    q.imgtype = 'face'
-  msg.http('https://ajax.googleapis.com/ajax/services/search/images')
-    .query(q)
-    .get() (err, res, body) ->
-      if err
-        msg.send "Encountered an error :( #{err}"
-        return
-      if res.statusCode isnt 200
-        msg.send "Bad HTTP response :( #{res.statusCode}"
-        return
-      images = JSON.parse(body)
-      images = images.responseData?.results
-      if images?.length > 0
-        image = msg.random images
-        cb ensureResult(image.unescapedUrl, animated)
-      else
-        msg.send "Sorry, I found no results for '#{query}'."
 
 # Forces giphy result to use animated version
 ensureResult = (url, animated) ->
