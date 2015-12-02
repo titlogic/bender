@@ -51,7 +51,7 @@ module.exports = (robot) ->
 
 safeSearchValue = (msg) ->
   str = if process.env.HUBOT_GOOGLE_SAFE_SEARCH == 'random'
-    if Math.random() < 0.1
+    if Math.random() < 0.2
       'off'
     else
       'high'
