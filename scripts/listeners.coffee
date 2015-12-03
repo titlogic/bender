@@ -50,6 +50,23 @@ module.exports = (robot) ->
       "Only one way to find out...",
       "BITE MY SHINY DAFFODIL ASS!",
       "Shut Up Baby I Know It!"
+      "http://45.media.tumblr.com/578dcda23333373a1ec38d47565044a9/tumblr_ncsko76rm21snzbj4o1_500.gif",
+      "https://media.giphy.com/media/ptnWal3n4VPdS/giphy.gif",
+      "http://horrorhomework.com/blog/wp-content/uploads/2013/02/tumblr_m1jldhXqJC1r6ja9oo1_500.gif",
+      "http://45.media.tumblr.com/6b859a1d0827614b9fe87311c054cdaf/tumblr_mw4fiivrU41qgk5ago1_400.gif",
+      "https://45.media.tumblr.com/ec01befa053a2b44b1523e67f4b2fb15/tumblr_mm6s43GmtB1rl52wjo1_500.gif",
+      "http://45.media.tumblr.com/tumblr_m3osoxX2Ei1qg6rkio2_250.gif",
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSty4VHsKTaBjvgckBQ8v684kLFAPKeLRV1a2bqDC7xyS3hjULHVQ",
+      "http://49.media.tumblr.com/tumblr_lsv82xSS5J1qzdf0go1_500.gif",
+      "http://38.media.tumblr.com/tumblr_m3mkcsa9rS1qg6rkio1_250.gif",
+      "http://49.media.tumblr.com/14b0d810b19f948b83d9c9dc9bde0b3a/tumblr_mxb8lqpHGl1rq7on0o1_400.gif",
+      "http://i.imgur.com/O25X7WD.gif",
+      "http://cdn.makeagif.com/media/10-16-2015/ixfSsM.gif",
+      "http://38.media.tumblr.com/tumblr_m3ks24rELp1qg6rkio5_250.gif",
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTH8oK0coP4jsCiGnl55lMsY86jdKCjMWeQtG_RLgzV0EebEani",
+      "http://25.media.tumblr.com/94c8a9897d44b5da84aa351ffbb8f471/tumblr_n0gd827F0L1qa68j2o1_r1_500.gif",
+      "https://coubsecure-a.akamaihd.net/get/b158/p/coub/simple/cw_gif_big/b604acba4cc/3fc58e161ab60567c4777/1447442360_4z2ar0_8yi3no5c.gif",
+      "http://i.kinja-img.com/gawker-media/image/upload/s--Xo3q-3w8--/18x4trzgxw960gif.gif",
     ]
     msg.send msg.random response
 
@@ -77,6 +94,7 @@ module.exports = (robot) ->
       ":tits:",
       ":ass:",
       ":eggplant: :fist: :sweat_drops: :open_mouth:"
+
     ]
     if Math.random() < 0.9
       msg.send msg.random response
