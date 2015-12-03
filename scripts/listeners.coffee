@@ -3,6 +3,24 @@
 
 module.exports = (robot) ->
 
+  robot.hear /^(hey )?bender(!)?$/i, (msg) ->
+    response = [
+      "bite my shiny metal ass",
+      "*fap* *fap* *fap* *fap* ...",
+      "WHAT? ",
+      "not now, busy.",
+      "bender is not here right now. ",
+      "http://www.wpclipart.com/cartoon/signs/more_signs/What_word_bubble.png",
+      "http://www.citizenbrooklyn.com/wp-content/uploads/2012/08/robots-sex-web.jpg",
+      "http://www.returnofkings.com/wp-content/uploads/2014/08/Sexy-Robot.jpg",
+      "http://cdn.thedailybeast.com/content/dailybeast/articles/2014/05/07/poll-finds-1-in-5-people-would-have-sex-with-a-robot/jcr:content/image.img.2000.jpg/1399455944991.cached.jpg",
+      "http://bbsimg.ngfiles.com/1/19839000/ngbbs4a8a58422c8c8.jpg",
+      "https://omnireboot.com/wp-content/uploads/2014/08/sex-life-of-robots-thumb.jpg",
+      "http://machineanthropology.com/wp-content/uploads/2015/03/18120_5_800.jpeg"
+    ]
+    msg.send msg.random response
+
+
   robot.hear /(whistles)/i, (msg) ->
     response = [
       "its dat woo wooooo",
