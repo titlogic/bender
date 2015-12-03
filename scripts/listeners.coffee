@@ -37,7 +37,19 @@ module.exports = (robot) ->
       "The game’s over. I have all the money. Compare your lives to mine and then kill yourselves!",
       "That’s closest thing to ‘Bender is great’ that anyone other me has ever said.",
       "I’m Bender, baby! Oh god, please insert liquor!",
-      "Hey sexy mama, wanna kill all humans?"
+      "Hey sexy mama, wanna kill all humans?",
+      "That is one crazy, uncircumcised man.",
+      "It's not just safe it's 40% safe!",
+      "Ooo, hefty. You could really bash in a skull with this thing.",
+      "No robot cow should have to be milked by a milking machine! And no milking machine should have to milk a robot cow!",
+      "No.",
+      "Well, life goes on... 'CEPT FOR YOU! Hahahahahaaa!",
+      "Sayin' B-E-N DDDDDEEEERRRRRR!",
+      "Hey, do I preach to you when you're lying stoned in the gutter? No! So beat it!",
+      "Bite my colossal metal ass!",
+      "Only one way to find out...",
+      "BITE MY SHINY DAFFODIL ASS!",
+      "Shut Up Baby I Know It!"
     ]
     msg.send msg.random response
 
