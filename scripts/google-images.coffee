@@ -63,7 +63,7 @@ safeSearchValue = (msg) ->
       "SACAGAWEA!!!",
       "Do you like dragons? DIIIICKKKK DRAGOOONNN!!",
       "Filthy filthy thang.",
-      "Yout chance for filth is high.",
+      "Your chance for filth is high.",
       "Welp, good luck with this one.",
       "Boobs.",
       "Fuckit, we're going raw.",
