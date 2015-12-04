@@ -71,7 +71,7 @@ module.exports = (robot) ->
     msg.send msg.random response
 
 
-  robot.hear /(whistles)/i, (msg) ->
+  robot.hear /(whistles|whistlers)/i, (msg) ->
     response = [
       "its dat woo wooooo",
       "https://soundcloud.com/vibesquad/the-whistles",
@@ -129,7 +129,7 @@ module.exports = (robot) ->
     msg.send msg.random response
 
 
-  robot.hear /(wi+oo+h|woo+ woo+)/i, (msg) ->
+  robot.hear /(wh*?i+oo+h|woo+ woo+)/i, (msg) ->
     response = [
       "https://images.rapgenius.com/f0a9c81851ac310f1e8a745173b17126.500x373x17.gif",
       "WIOOOH!!!!",
