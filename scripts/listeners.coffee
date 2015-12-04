@@ -123,10 +123,46 @@ module.exports = (robot) ->
       "its dat woo wooooo",
       "https://soundcloud.com/vibesquad/the-whistles",
       "http://i.imgur.com/KeepBS0.jpg",
-      "http://24.media.tumblr.com/tumblr_lx31kykJQX1r2tufko1_400.jpg"
+      "http://24.media.tumblr.com/tumblr_lx31kykJQX1r2tufko1_400.jpg",
       "https://images.rapgenius.com/f0a9c81851ac310f1e8a745173b17126.500x373x17.gif",
       "WIOOOH!!!!",
       "https://s-media-cache-ak0.pinimg.com/736x/86/a3/c8/86a3c846b0ecdc82f1c86fb305239ead.jpg",
       "tits."
+    ]
+    msg.send msg.random response
+
+
+  robot.hear /chris/i, (msg) ->
+    response = [
+      "get off the shitter",
+      "asian porn.",
+      "hellllooooo kitty"
+    ]
+    msg.send msg.random response
+
+  robot.hear /(shannon|shenanigan|shannonymous)/i, (msg) ->
+    response = [
+      "Ya all like dragons?",
+      "Fully go a noner right now.",
+      "*thrust* *thrust *thrust*"
+    ]
+    msg.send msg.random response
+
+  robot.hear /(hannah|hannimal)/i, (msg) ->
+    response = [
+      "1991!?!?!?!?!",
+      "dick poles.",
+      "snap & clap yo shit.",
+      "DAS IT!",
+      "my shit's rigorous."
+    ]
+    msg.send msg.random response
+
+  robot.hear /(dan)/i, (msg) ->
+    response = [
+      "Night court.",
+      "Pewwwwwwdipie!!!!!",
+      "hustle trees",
+      "not now, he is broken."
     ]
     msg.send msg.random response
