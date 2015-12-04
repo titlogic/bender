@@ -131,12 +131,14 @@ module.exports = (robot) ->
     ]
     msg.send msg.random response
 
-
   robot.hear /chris/i, (msg) ->
     response = [
-      "get off the shitter",
+      "get off the shitter!",
       "asian porn.",
-      "hellllooooo kitty"
+      "hellllooooo kitty",
+      "Rule 34.",
+      "If it exists then there is porn on it",
+      "what do you do with a drunken saylor"
     ]
     msg.send msg.random response
 
@@ -158,7 +160,8 @@ module.exports = (robot) ->
       "bitch why you mad??",
       "my pussy pops and yours dont.",
       "severly.",
-      "bitch, huhhhh huh!"
+      "bitch, huhhhh huh!",
+      "your pussy is mine, bitch!"
     ]
     msg.send msg.random response
 
@@ -167,6 +170,14 @@ module.exports = (robot) ->
       "Night court.",
       "Pewwwwwwdipie!!!!!",
       "hustle trees",
-      "not now, he is broken."
+      "not now, he is broken.",
+      "SHUT THE FUCK UP DAN.",
+      "you killed my fava.",
+      "she's got fava issues",
+      "dont threaten me with a good time!",
+      "togher we form..... DANNIMAL!!!!",
+      "I've been high since I was 17.",
+      "Am i right????!?!?",
+      "What's up bros!?!?"
     ]
     msg.send msg.random response
