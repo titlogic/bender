@@ -71,17 +71,6 @@ module.exports = (robot) ->
     msg.send msg.random response
 
 
-  robot.hear /(whistles|whistlers)/i, (msg) ->
-    response = [
-      "its dat woo wooooo",
-      "https://soundcloud.com/vibesquad/the-whistles",
-      "http://i.imgur.com/KeepBS0.jpg",
-      "http://24.media.tumblr.com/tumblr_lx31kykJQX1r2tufko1_400.jpg"
-    ]
-    if Math.random() < 0.5
-      msg.send msg.random response
-
-
   robot.hear /(tits|I approve)/i, (msg) ->
     response = [
       "did someone say tits?",
@@ -129,8 +118,12 @@ module.exports = (robot) ->
     msg.send msg.random response
 
 
-  robot.hear /(wh*?i+oo+h|woo+ woo+)/i, (msg) ->
+  robot.hear /(whistles|whistlers|wh*?i+oo+h|woo+ woo+)/i, (msg) ->
     response = [
+      "its dat woo wooooo",
+      "https://soundcloud.com/vibesquad/the-whistles",
+      "http://i.imgur.com/KeepBS0.jpg",
+      "http://24.media.tumblr.com/tumblr_lx31kykJQX1r2tufko1_400.jpg"
       "https://images.rapgenius.com/f0a9c81851ac310f1e8a745173b17126.500x373x17.gif",
       "WIOOOH!!!!",
       "https://s-media-cache-ak0.pinimg.com/736x/86/a3/c8/86a3c846b0ecdc82f1c86fb305239ead.jpg",
