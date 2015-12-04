@@ -161,7 +161,10 @@ module.exports = (robot) ->
       "my pussy pops and yours dont.",
       "severly.",
       "bitch, huhhhh huh!",
-      "your pussy is mine, bitch!"
+      "your pussy is mine, bitch!",
+      "suck my non-existent dick.",
+      "bitch please",
+      "would ya look at dat?"
     ]
     msg.send msg.random response
 
