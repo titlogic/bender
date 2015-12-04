@@ -146,7 +146,8 @@ module.exports = (robot) ->
     response = [
       "Ya all like dragons?",
       "Fully go a noner right now.",
-      "*thrust* *thrust *thrust*"
+      "*thrust* *thrust *thrust*",
+      "fucking train."
     ]
     msg.send msg.random response
 
