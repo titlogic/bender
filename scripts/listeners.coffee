@@ -150,11 +150,15 @@ module.exports = (robot) ->
 
   robot.hear /(hannah|hannimal)/i, (msg) ->
     response = [
-      "1991!?!?!?!?!",
+      "'91!?!?!?!?!",
       "dick poles.",
       "snap & clap yo shit.",
       "DAS IT!",
-      "my shit's rigorous."
+      "my shit's rigorous.",
+      "bitch why you mad??",
+      "my pussy pops and yours dont.",
+      "severly.",
+      "bitch, huhhhh huh!"
     ]
     msg.send msg.random response
 
