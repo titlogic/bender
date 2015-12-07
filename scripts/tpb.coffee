@@ -40,7 +40,12 @@ jroc = [
   "(to Randy) What you talkin' 'bout, you inflatable Elvis?",
   "Oh, no, you di'n't just call me Jamie!",
   "(holding his chains to Randy's gut like a stethoscope) I hear chicken. I hear cola fizz, and mustard and relish coagulating together with french fries and onion rings, but you know what? I don't hear a heart.",
-  "Carpe Dizem!"
+  "Carpe Dizem!",
+  "man, T at a halfway house man but he'll be 'her","",
+  "he mafk'n blew himselves up.",
+  "I was down with Ray, dawg. Dat old fuckin' white boy...",
+  "I'm gonna axe 'em for ya right quick.",
+
 ]
 
 ricky = [
@@ -53,14 +58,12 @@ ricky = [
   "Denial and Error... ",
   "Make my words (Mark)*",
   "Hey Bubs, are you watching that documentary on Saskatchewans?(Sasquatches)*",
-  "",
   "I'm trying to try here, Sarah.",
   "Who's playing the pianio? ",
   "Make like a tree and fuck off. ",
   "I'm not the kind of person to say atodaso, but you know what? Atodaso, I-fucking-atodaso. ",
   "It was golfing flames, flames just golfing, golfing. ",
   "It's a Catch-23 situation. ",
-  "",
   "Looks like a tropical earthquake blew through here. ",
   "We can get 2 birds stoned at once. ",
   "Why do you look like Indianapolis Jones? ",
@@ -98,7 +101,6 @@ ricky = [
   "One day I will go somewhere that is hot, like Majaica or the Dromedary Republic ",
   "Trinity made a life-ing thing basically out of this chicken. Started with a little eggy thing, and heated it up under these incu-baker things, and it...it was bornt. ",
   "We'll split 50/50/50. ",
-  "",
   "I hate to have to give you an ultimarium ",
   "It's me or Gumby and Pifuckio ",
   "Raykins! That's what they are, Julian, fuckin' raykins! ",
@@ -109,8 +111,6 @@ ricky = [
   "You gotta do illegal things once in a while, and then maturinate into a better person. ",
   "Your thoughts might be better than mine, but I have thoughts going around in my head too, about...different thinkings...about brain things that you can use and...doing different things.",
   "Sweet empowered chicken things ",
-  "",
-  "",
   "It was my mother's mating name. ",
   "Holy shit, you got us a lemon-zine? ",
   "Randy bornt my baby. ",
@@ -172,6 +172,19 @@ ricky = [
   "who the fuck puts an alarm system in a barn. fuckin’ idiots!",
   "yeah, god. that’s what i said. santa.",
   "you can press charges when the cops get here. they’re on their way.",
+  "We got some good dope for 'ya, I'll bring by after work.",
+  "I fuckin' warned him about the propane...",
+  "Instant karla, fucky!",
+  "Jesus christ Jacob, what the fuck was that?",
+  "Jesus christ. ",
+  "Dope's a part of me, and I cant change that. Dope's a part of everybody. I dont know if you know this, but peoples have this naturally occurring cannabal's sectors in their brain. What the fuck do you think we have those there for? Its for dope to get us high, that's what.",
+  "This is all mine now, I have all of this.",
+  "Just shutty that fucky!",
+  "You look fucked.",
+  "Ahhhh hhhhuuuaahhhhhhhhh!",
+  "Don't fuckin' shush me.",
+  "It fuckin' sucks.",
+
 ]
 
 lahey = [
@@ -210,7 +223,11 @@ lahey = [
   "Lahey: Shit moths, Randy. Randy: Is that you or the liquor speaking, Mr Lahey?",
   "Hey Sexian ",
   "Whenever I'm sober, the boys are careful, they're scared of me cause they know what I'll do. They're cautious, it's hard to catch them. But when I'm drinking, their shitguards are down and they fuck up, but the problem is when I'm drinking, I fuck up too, a lot, Barb. I gotta be drinking, but not drinking, ya see? The only way to do that, is to pretend, I am gonna pretend to be drunk, collect evidence and build a solid case against them. Sober as a judge I'm gonna show up today at the cheeseburger picnic, and I'm gonna pretend to be a drunken idiot. And why? Shitguards, Barb...shitguards.",
-  "This place is a dump. You have my permission to do whatever you want, any time any place, and you don't have to listen to Pilsbandy Doughboy "
+  "This place is a dump. You have my permission to do whatever you want, any time any place, and you don't have to listen to Pilsbandy Doughboy ",
+  "Yeah, well I invited myself. ",
+  "But when he shits... he still shits in the park.",
+  "Livin' the fuckin dream afghanarandy.",
+
 ]
 
 bubbles = [
@@ -237,18 +254,39 @@ bubbles = [
   "There's a note pinned to a tree! Diddly-dee!",
   "(To Randy re: cheeseburgers) How many did you drive into that big fuckin cheeseburger-locker?",
   "Well, when I was a little guy, I always wanted to go up into space, be a space-man. But you gotta be able to see really fuckin' good to do that job. Some guy would take one look at me and say 'Uhhh, sorry sir, you gotta be able to see a little better than you'... I don't give a fuck.",
-  "Holy sweet flying fuck!"
+  "Holy sweet flying fuck!",
+  "(grunts)",
+  "(whimpering)",
+  "Cocksucker!",
+  "Son of a whore! ",
+  "Hey boys, how's she goin'?",
+  "The government. Harrrrd cock to suck.",
+  "This could be a fuckin' life changer. This could be a mansion!",
+]
+
+julian = [
+  "Fuck's sakes."
+]
+
+ray = [
+  "Fucking way she goes.",
 ]
 
 module.exports = (robot) ->
-  robot.hear /.*(hey bubbles).*/i, (msg) ->
+  robot.hear /(bubbles)/i, (msg) ->
     msg.send msg.random bubbles
 
-  robot.hear /.*(hey ricky).*/i, (msg) ->
+  robot.hear /(ricky)/i, (msg) ->
     msg.send msg.random ricky
 
-  robot.hear /.*(hey j-roc).*/i, (msg) ->
+  robot.hear /(j-roc)/i, (msg) ->
     msg.send msg.random jroc
 
-  robot.hear /.*(hey lahey).*/i, (msg) ->
+  robot.hear /(lahey)/i, (msg) ->
     msg.send msg.random lahey
+
+  robot.hear /(julian)/i, (msg) ->
+    msg.send msg.random julian
+
+  robot.hear /(ray)/i, (msg) ->
+    msg.send msg.random ray

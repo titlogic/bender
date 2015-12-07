@@ -145,9 +145,10 @@ module.exports = (robot) ->
   robot.hear /(shannon|shenanigan|shannonymous)/i, (msg) ->
     response = [
       "Ya all like dragons?",
-      "Fully go a noner right now.",
+      "Fully got a noner right now.",
       "*thrust* *thrust *thrust*",
-      "fucking train."
+      "fucking train.",
+      "quatro muchacho."
     ]
     msg.send msg.random response
 
@@ -182,6 +183,7 @@ module.exports = (robot) ->
       "togher we form..... DANNIMAL!!!!",
       "I've been high since I was 17.",
       "Am i right????!?!?",
-      "What's up bros!?!?"
+      "What's up bros!?!?",
+      "Your best case scenario you come out unscathed."
     ]
     msg.send msg.random response
