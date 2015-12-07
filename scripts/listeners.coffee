@@ -159,7 +159,7 @@ module.exports = (robot) ->
       "snap & clap yo shit.",
       "DAS IT!",
       "my shit's rigorous.",
-      "bitch why you mad??",
+      "bitch, why you mad?? huuuh huuwah!",
       "my pussy pops and yours dont.",
       "severly.",
       "bitch, huhhhh huh!",
