@@ -144,7 +144,7 @@ module.exports = (robot) ->
 
   robot.hear /(shannon|shenanigan|shannonymous)/i, (msg) ->
     response = [
-      "Ya all like dragons?",
+      "Ya'll like dragons?",
       "Fully got a noner right now.",
       "*thrust* *thrust *thrust*",
       "fucking train.",
@@ -180,7 +180,7 @@ module.exports = (robot) ->
       "you killed my fava.",
       "she's got fava issues",
       "dont threaten me with a good time!",
-      "togher we form..... DANNIMAL!!!!",
+      "together we form..... DANNIMAL!!!!",
       "I've been high since I was 17.",
       "Am i right????!?!?",
       "What's up bros!?!?",
