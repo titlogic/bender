@@ -146,9 +146,14 @@ module.exports = (robot) ->
     response = [
       "Ya'll like dragons?",
       "Fully got a noner right now.",
-      "*thrust* *thrust *thrust*",
+      "*thrust* *thrust* *thrust*",
+      "*fap* *fap* *fap*",
       "fucking train.",
-      "quatro muchacho."
+      "quatro muchacho.",
+      "You know how many BP&J sandwiches that would cost?",
+      "DGAF.",
+      "Fuckit."
+
     ]
     msg.send msg.random response
 
@@ -166,7 +171,8 @@ module.exports = (robot) ->
       "your pussy is mine, bitch!",
       "suck my non-existent dick.",
       "bitch please",
-      "would ya look at dat?"
+      "would ya look at dat?",
+      "shut your dick holster"
     ]
     msg.send msg.random response
 
@@ -184,6 +190,10 @@ module.exports = (robot) ->
       "I've been high since I was 17.",
       "Am i right????!?!?",
       "What's up bros!?!?",
-      "Your best case scenario you come out unscathed."
+      "I ain't got em!",
+      "Dan fashion.",
+      "Your best case scenario you come out unscathed.",
+      "We aint flippin burgers in here",
+      "What are you, hourly?"
     ]
     msg.send msg.random response
