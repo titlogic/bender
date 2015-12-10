@@ -152,7 +152,8 @@ module.exports = (robot) ->
       "quatro muchacho.",
       "You know how many BP&J sandwiches that would cost?",
       "DGAF.",
-      "Fuckit."
+      "Fuckit.",
+      "Cock."
 
     ]
     msg.send msg.random response
