@@ -273,20 +273,20 @@ ray = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /(bubbles)/i, (msg) ->
-    msg.send msg.random bubbles
+  robot.hear /(?!:)(bubbles)(?!:)/i, (msg) ->
+    msg.send ":bubbles:: " + msg.random bubbles
 
-  robot.hear /(ricky)/i, (msg) ->
-    msg.send msg.random ricky
+  robot.hear /(?!:)(ricky|rickey)(?!:)/i, (msg) ->
+    msg.send ":ricky:: " + msg.random ricky
 
-  robot.hear /(j-roc)/i, (msg) ->
-    msg.send msg.random jroc
+  robot.hear /(?!:)(j-roc|j-roc|j roc)(?!:)/i, (msg) ->
+    msg.send ":j-roc:: " + msg.random jroc
 
-  robot.hear /(lahey)/i, (msg) ->
-    msg.send msg.random lahey
+  robot.hear /(?!:)(lahey)(?!:)/i, (msg) ->
+    msg.send ":lahey:: " + msg.random lahey
 
-  robot.hear /(julian)/i, (msg) ->
-    msg.send msg.random julian
+  robot.hear /(?!:)(julian)(?!:)/i, (msg) ->
+    msg.send ":julian:: " + msg.random julian
 
-  robot.hear /(ray)/i, (msg) ->
-    msg.send msg.random ray
+  robot.hear /(?!:)(ray)(?!:)/i, (msg) ->
+    msg.send ":ray:: " + msg.random ray
