@@ -279,7 +279,7 @@ module.exports = (robot) ->
   robot.hear /(?!:)(ricky|rickey)(?!:)/i, (msg) ->
     msg.send ":ricky:: " + msg.random ricky
 
-  robot.hear /(?!:)(j-roc|j-roc|j roc)(?!:)/i, (msg) ->
+  robot.hear /(?!:)(j-roc|jroc|j roc)(?!:)/i, (msg) ->
     msg.send ":j-roc:: " + msg.random jroc
 
   robot.hear /(?!:)(lahey)(?!:)/i, (msg) ->
