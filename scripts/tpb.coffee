@@ -41,7 +41,7 @@ jroc = [
   "Oh, no, you di'n't just call me Jamie!",
   "(holding his chains to Randy's gut like a stethoscope) I hear chicken. I hear cola fizz, and mustard and relish coagulating together with french fries and onion rings, but you know what? I don't hear a heart.",
   "Carpe Dizem!",
-  "man, T at a halfway house man but he'll be 'her","",
+  "man, T at a halfway house man but he'll be 'her",
   "he mafk'n blew himselves up.",
   "I was down with Ray, dawg. Dat old fuckin' white boy...",
   "I'm gonna axe 'em for ya right quick.",
