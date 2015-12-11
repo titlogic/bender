@@ -158,7 +158,8 @@ module.exports = (robot) ->
       "DGAF.",
       "Fuckit.",
       "Cock."
-
+      "Sploooooosh!",
+      "I FUCKING WIN!"
     ]
     msg.send msg.random response
 
