@@ -131,6 +131,10 @@ module.exports = (robot) ->
     ]
     msg.send msg.random response
 
+  robot.hear /lol/i, (msg) ->
+    msg.send "stop doing that..."
+
+
   robot.hear /chris/i, (msg) ->
     response = [
       "get off the shitter!",
