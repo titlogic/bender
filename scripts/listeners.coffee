@@ -134,11 +134,9 @@ module.exports = (robot) ->
   robot.hear /^i: (.*)/i, (msg) ->
     msg.send "@bender image me " + msg.match[1]
 
-
-
-  robot.hear /lol/i, (msg) ->
-    msg.send "stop doing that..."
-
+  # LOL police
+  # robot.hear /lol/i, (msg) ->
+  #   msg.send "stop doing that..."
 
   robot.hear /chris/i, (msg) ->
     response = [
