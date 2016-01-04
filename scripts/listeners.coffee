@@ -85,7 +85,7 @@ module.exports = (robot) ->
       ":eggplant: :fist: :sweat_drops: :open_mouth:"
 
     ]
-    if Math.random() < 0.9
+    if Math.random() < 0.2
       msg.send msg.random response
 
 
@@ -115,8 +115,8 @@ module.exports = (robot) ->
       "That's what I love about these high school girls, man. I get older, they stay the same age. ",
       "I love those redheads! "
     ]
-    msg.send msg.random response
-
+    if Math.random() < 0.2
+      msg.send msg.random response
 
   robot.hear /(whistles|whistlers|wh*?i+oo+h|woo+ woo+)/i, (msg) ->
     response = [
@@ -129,7 +129,8 @@ module.exports = (robot) ->
       "https://s-media-cache-ak0.pinimg.com/736x/86/a3/c8/86a3c846b0ecdc82f1c86fb305239ead.jpg",
       "tits."
     ]
-    msg.send msg.random response
+    if Math.random() < 0.2
+      msg.send msg.random response
 
   robot.hear /^i: (.*)/i, (msg) ->
     msg.send "@bender image me " + msg.match[1]
@@ -147,7 +148,8 @@ module.exports = (robot) ->
       "If it exists then there is porn on it",
       "what do you do with a drunken saylor"
     ]
-    msg.send msg.random response
+    if Math.random() < 0.2
+      msg.send msg.random response
 
   robot.hear /(shannon|shenanigan|shannonymous)/i, (msg) ->
     response = [
@@ -164,7 +166,8 @@ module.exports = (robot) ->
       "Sploooooosh!",
       "I FUCKING WIN!"
     ]
-    msg.send msg.random response
+    if Math.random() < 0.2
+      msg.send msg.random response
 
   robot.hear /(hannah|hannimal)/i, (msg) ->
     response = [
@@ -183,7 +186,8 @@ module.exports = (robot) ->
       "would ya look at dat?",
       "shut your dick holster"
     ]
-    msg.send msg.random response
+    if Math.random() < 0.2
+      msg.send msg.random response
 
   robot.hear /(dan)/i, (msg) ->
     response = [
@@ -205,4 +209,5 @@ module.exports = (robot) ->
       "We aint flippin burgers in here",
       "What are you, hourly?"
     ]
-    msg.send msg.random response
+    if Math.random() < 0.2
+      msg.send msg.random response
