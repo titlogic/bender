@@ -50,18 +50,26 @@ module.exports = (robot) ->
   #         msg.send image.link for image in images
 
 
-  robot.hear /(tit|titty|boob|boobie) bomb( (\d+))?/i, (msg) ->
+  robot.hear /(.*?) bomb( (\d+))?/i, (msg) ->
+    keyword = msg.match[1]
     count = msg.match[3] || 5
     client_id = 'Client-ID ' + process.env.IMGUR_CLIENT_ID
 
-    gallery = msg.random ["titties", "naturaltitties", "boobgifs"]
+    # Map keyword to list of galleries.
+    galleries = if /tit|titty|boob|boobie/.test(keyword)
+      ["titties", "naturaltitties", "boobgifs", ""]
+    else if /redhead/.test(keyword)
+      ["redhead"]
+
+    gallery = msg.random galleries
+    # msg.send "Keyword: " + keyword
+
     msg.http('https://api.imgur.com/3/gallery/r/'+gallery)
       .headers(Authorization: client_id)
       .get() (err, res, body) ->
-        # msg.send body
         images = JSON.parse(body).data # Full list of images
         images = images.shuffle() # Randomize
         images = images.slice(0,count) # Limit
-
+        msg.send "Gallery: " + gallery
         if images.length > 0
           msg.send image.link for image in images
