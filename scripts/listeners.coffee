@@ -211,3 +211,18 @@ module.exports = (robot) ->
     ]
     if Math.random() < 0.2
       msg.send msg.random response
+
+  # Titty bomb....
+  robot.hear /(tit|titty|boob|boobie) bomb( (\d+))?/i, (msg) ->
+    count = msg.match[3] || 5
+    search_terms = [
+      "titty", "boobs"
+    ]
+    client_id = 'Client-ID ' + process.env.IMGUR_CLIENT_ID
+    msg.http('https://api.imgur.com/3/gallery/search')
+      .headers(Authorization: client_id)
+      .query(q: msg.random(search_terms))
+      .get() (err, res, body) ->
+        images = JSON.parse(body).data.slice(0,count)
+        if images.length > 0
+          msg.send image.link for image in images
