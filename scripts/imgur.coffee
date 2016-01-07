@@ -60,6 +60,8 @@ module.exports = (robot) ->
       ["titties", "naturaltitties", "boobgifs", ""]
     else if /redhead/.test(keyword)
       ["redhead"]
+    else if /unicorn/.test(keyword)
+      ["unicorn"]
 
     gallery = msg.random galleries
     # msg.send "Keyword: " + keyword
