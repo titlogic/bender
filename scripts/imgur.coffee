@@ -57,7 +57,7 @@ module.exports = (robot) ->
 
     # Map keyword to list of galleries.
     galleries = if /tit|titty|boob|boobie/.test(keyword)
-      ["titties", "naturaltitties", "boobgifs", ""]
+      ["titties", "naturaltitties", "boobgifs"]
     else if /redhead/.test(keyword)
       ["redhead"]
     else if /unicorn/.test(keyword)
@@ -75,3 +75,24 @@ module.exports = (robot) ->
         msg.send "Gallery: " + gallery
         if images.length > 0
           msg.send image.link for image in images
+
+  # bender X me - returns  random image from a list of galleries that map to keyord X
+  robot.respond /(.*?) me/i, (msg) ->
+    keyword = msg.match[1]
+    client_id = 'Client-ID ' + process.env.IMGUR_CLIENT_ID
+
+    # Map keyword to list of galleries.
+    galleries = if /weed/.test(keyword)
+      ["weed"]
+
+    else if /ass/.test(keyword)
+      ["ass", "twerk"]
+
+
+    gallery = msg.random galleries
+    msg.http('https://api.imgur.com/3/gallery/r/'+gallery)
+      .headers(Authorization: client_id)
+      .get() (err, res, body) ->
+        images = JSON.parse(body).data # Full list of images
+        images = images.shuffle() # Randomize
+        msg.send images[0].link
