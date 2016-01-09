@@ -164,7 +164,8 @@ module.exports = (robot) ->
       "Fuckit.",
       "Cock."
       "Sploooooosh!",
-      "I FUCKING WIN!"
+      "I FUCKING WIN!",
+      ":basketball: :football: :rugby_football: ---> :cat2: = :rooster:"
     ]
     if Math.random() < 0.2
       msg.send msg.random response
