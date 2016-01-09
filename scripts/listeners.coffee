@@ -1,8 +1,27 @@
 # Description:
-#   I gonna stuff a bunch of responses here based on what people say.
-
+#   Dumping ground for random homemade dscripts
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hey bender - See what bender has to say to you...
+#   [tits|boobs] - A lazy boob response.
+#   [alright] - A lazy McConaughey response.
+#   [whistles|whistlers|wh*?i+oo+h|woo+ woo+] - A lazy Bubb Rubb!
+#   [chris|dan|hannah|shannon] - A lazy quote from one of the mentioned MAFKs.
+#
+# Notes:
+#   None
+#
+# Author:
+#   MCDIZZLE
 module.exports = (robot) ->
 
+  # HEY BENDER
   robot.hear /^(hey )?bender(!)?$/i, (msg) ->
     response = [
       "bite my shiny metal ass",
@@ -71,7 +90,8 @@ module.exports = (robot) ->
     msg.send msg.random response
 
 
-  robot.hear /(tits|I approve)/i, (msg) ->
+  # Lazy Boobs
+  robot.hear /(tits|boobs)/i, (msg) ->
     response = [
       "did someone say tits?",
       "TITS! ",
@@ -88,7 +108,7 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
-
+  # Lazy McConaughey
   robot.hear /(alright)/i, (msg) ->
     response = [
       "alright3x!",
@@ -118,6 +138,7 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
+  # Lazy Bubb Rubb whistles
   robot.hear /(whistles|whistlers|wh*?i+oo+h|woo+ woo+)/i, (msg) ->
     response = [
       "its dat woo wooooo",
@@ -132,13 +153,7 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
-  robot.hear /^i: (.*)/i, (msg) ->
-    msg.send "@bender image me " + msg.match[1]
-
-  # LOL police
-  # robot.hear /lol/i, (msg) ->
-  #   msg.send "stop doing that..."
-
+  # Chris quotes
   robot.hear /chris/i, (msg) ->
     response = [
       "get off the shitter!",
@@ -151,6 +166,7 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
+  # Shannon quotes
   robot.hear /(shannon|shenanigan|shannonymous)/i, (msg) ->
     response = [
       "Ya'll like dragons?",
@@ -170,6 +186,7 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
+  # Hannah quotes
   robot.hear /(hannah|hannimal)/i, (msg) ->
     response = [
       "'91!?!?!?!?!",
@@ -190,6 +207,7 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
+  # Dan quotes
   robot.hear /(dan)/i, (msg) ->
     response = [
       "Night court.",
