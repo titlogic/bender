@@ -10,9 +10,9 @@
 #   http://api.imgur.com and register an application.
 #
 # Commands:
-#   hubot [ass|boob|pug|redhead] me - Searches predetermined gallery for an image
-#   [ass|boob|pug|redhead] bomb <n> - Searches predetermined gallery & returns N images
-#   imgur me <query> - Searches imgur for <query> and returns an image
+#   `bender [ass|boob|pug|redhead] me` - Searches predetermined gallery for an image
+#   `[ass|boob|pug|redhead] bomb <n>` - Searches predetermined gallery & returns N images
+#   `imgur me <query>` - Searches imgur for <query> and returns an image
 #
 # Author:
 #  MCDIZZLE-MAFK!

@@ -9,8 +9,8 @@
 #   HUBOT_GOOGLE_SAFE_SEARCH - Optional. Search safety level.
 #
 # Commands:
-#   hubot image me <query> - The Original. Queries Google Images for <query> and returns a random top result.
-#   hubot animate me <query> - The same thing as `image me`, except adds a few parameters to try to return an animated GIF instead.
+#   `image me <query>` - The Original. Queries Google Images for <query> and returns a random top result.
+#   `animate me <query>` - The same thing as `image me`, except adds a few parameters to try to return an animated GIF instead.
 
 module.exports = (robot) ->
 

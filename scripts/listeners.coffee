@@ -8,11 +8,11 @@
 #   None
 #
 # Commands:
-#   hey bender - See what bender has to say to you...
-#   [tits|boobs] - A lazy boob response.
-#   [alright] - A lazy McConaughey response.
-#   [whistles|whistlers|wh*?i+oo+h|woo+ woo+] - A lazy Bubb Rubb!
-#   [chris|dan|hannah|shannon] - A lazy quote from one of the mentioned MAFKs.
+#   `hey bender` - See what bender has to say to you...
+#   `[tits|boobs]` - A lazy boob response.
+#   `[alright]` - A lazy McConaughey response.
+#   `[whistles|whistlers|wh*?i+oo+h|woo+ woo+]` - A lazy Bubb Rubb!
+#   `[chris|dan|hannah|shannon]` - A lazy quote from one of the mentioned MAFKs.
 #
 # Notes:
 #   None

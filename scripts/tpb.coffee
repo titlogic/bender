@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hey [j-roc|lahey|ricky|bubbles] - Display a random TPB quote.
+#   `hey [j-roc|lahey|ricky|bubbles]` - Display a random TPB quote.
 #
 # Notes:
 #   None
