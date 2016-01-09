@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   [trap|ackbar] - Display an Admiral Ackbar piece of wonder.
+#   `[trap|ackbar]` - Display an Admiral Ackbar piece of wonder.
 #
 #
 # Author:
