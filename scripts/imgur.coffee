@@ -10,9 +10,9 @@
 #   http://api.imgur.com and register an application.
 #
 # Commands:
-#   hubot <keyword> me - Maps <keyword> to list of known kick ass galleries & returns 1 image. Example keywords are: [ass|boob|redhead]
-#   <keyword> bomb <n> - Maps <keyword> to list of known kick ass galleries & returns N images. Example keywords are: [ass|tit|redhead]
-#   imgur me <query> - Searches imgur for <query> and returns 1 images
+#   hubot [ass|boob|pug|redhead] me - Searches predetermined gallery for an image
+#   [ass|boob|pug|redhead] bomb <n> - Searches predetermined gallery & returns N images
+#   imgur me <query> - Searches imgur for <query> and returns an image
 #
 # Author:
 #  MCDIZZLE-MAFK!
@@ -24,6 +24,8 @@ module.exports = (robot) ->
   termToGaleries = (term) ->
     galleries = if /weed/.test(term)
       ["weed"]
+    else if /pug/.test(term)
+      ["pug"]
     else if /ass/.test(term)
       ["ass", "twerk"]
     else if /tit|titty|boob|boobie/.test(term)

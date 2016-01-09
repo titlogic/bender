@@ -8,16 +8,13 @@
 #   None
 #
 # Commands:
-#   hey j-roc - Display a random J-ROC quote
-#   hey lahey - Display a random Lahey quote
-#   hey ricky - Display a random Ricky quote
-#   hey bubbles - Display a random Bubbles quote
+#   hey [j-roc|lahey|ricky|bubbles] - Display a random TPB quote.
 #
 # Notes:
 #   None
 #
 # Author:
-#   carmstrong
+#   carmstrong & MCDIZZLE
 
 jroc = [
   "There's 2 things mafukas gonna know about J-to-the-ROC: I spin more rhymes than a lazy Susan, and I'm innocent until mah guilt is proven! Peace! Representin' Sunnyvale, straight-the-fuck-up.",
