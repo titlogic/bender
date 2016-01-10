@@ -25,11 +25,13 @@ module.exports = (robot) ->
   # Maping of keyword triggers to imgur subredits:
   termToGaleries = (term) ->
     galleries = if /weed/.test(term)
-      ["weed"]
-    else if /ass|butt|twerk/.test(term)
-      ["ass", "twerk"]
+      ["weed", 'trees', ]
+    else if /ass|butt/.test(term)
+      ["ass", "butt", 'girlsinyogapants', 'assinthong', 'TightShorts']
     else if /tit|titty|boob|boobie/.test(term)
-      ["titties", "naturaltitties", "boobgifs"]
+      ["titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans']
+    else if /twerk/.test(term)
+      ['twerking', 'twerk', ]
     else if /redhead/.test(term)
       ["redhead", "redheads"]
     else if /weed|bud/.test(term)
