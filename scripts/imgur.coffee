@@ -24,17 +24,17 @@ module.exports = (robot) ->
 
   # Maping of keyword triggers to imgur subredits:
   termToGaleries = (term) ->
-    galleries = if /weed/.test(term)
+    galleries = if /\b(weed)\b/.test(term)
       ["weed", 'trees', ]
-    else if /ass|butt/.test(term)
+    else if /\b(ass|butt)\b/.test(term)
       ["ass", "butt", 'girlsinyogapants', 'assinthong', 'TightShorts']
-    else if /tit|titty|boob|boobie/.test(term)
+    else if /\b(tit|titty|boob|boobie)\b/.test(term)
       ["titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans']
-    else if /twerk/.test(term)
+    else if /\btwerk\b/.test(term)
       ['twerking', 'twerk', ]
-    else if /redhead/.test(term)
+    else if /\b(redhead)\b/.test(term)
       ["redhead", "redheads"]
-    else if /weed|bud/.test(term)
+    else if /\b(weed|bud)\b/.test(term)
       ["marijuana|weed|420"]
     else
       []
@@ -73,7 +73,7 @@ module.exports = (robot) ->
         msg.send images[0].link
 
   # BOMBS! (titty bomb 5)
-  robot.hear /(.*?) bomb( (\d+))?/i, (msg) ->
+  robot.hear /\b(.*?)\b bomb( (\d+))?/i, (msg) ->
     term = msg.match[1]
     count = msg.match[3] || 5
     gallery = msg.random(termToGaleries(term))
