@@ -50,7 +50,7 @@ module.exports = (robot) ->
           msg.send image.link for image in images
         else
           term = term.replace /bender /, ''
-          for i in [0..count]
+          for i in [1..count]
             imgur_me(msg, term)
 
   image_me = (msg, gallery, term) ->
