@@ -70,12 +70,24 @@ module.exports = (robot) ->
         images = images.shuffle() # Randomize
         msg.send images[0].link
 
+  cock_bomb = (msg, cock) ->
+    cocks = ["cock.", "COCK", ".", "...", ". ", ".....", "Cock. Cock. Cock.", "COOOOCK!"]
+    for n in [1..cock]
+      cock_count = Math.random() * cocks.size
+      random_cocks = cocks.shuffle()
+      train_of_cocks = cocks[..random_cocks].join(' ')
+      msg.send train_of_cocks
+
+
   # BOMBS! (titty bomb 5)
   robot.hear /\b(.*?)\b bomb( (\d+))?/i, (msg) ->
     term = msg.match[1]
     count = msg.match[3] || 5
     gallery = msg.random(termToGaleries(term))
-    image_bomb(msg, gallery, term, count)
+    if term != 'cock'
+      image_bomb(msg, gallery, term, count)
+    else
+      cock_bomb(msg, count)
 
   # Single images (bender boob me)
   robot.respond /(.*?) me/i, (msg) ->
