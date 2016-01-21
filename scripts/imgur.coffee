@@ -71,11 +71,12 @@ module.exports = (robot) ->
         msg.send images[0].link
 
   cock_bomb = (msg, cock) ->
-    cocks = ["cock.", "COCK", ".", "...", ". ", ".....", "Cock. Cock. Cock.", "COOOOCK!"]
+    cocks = ["cock.", "COCK", ".", "...", ". ", ".....", "Cock. Cock. Cock.", "COOOOCK!", 'COOOOOOCCCCCCCKKKK', 'cockadoodledoo', 'c o c k', 'small cock', 'LARGE COCK', '#8@!$', 'meh', 'dick dragon', ':dragon:', ':rooster:'
+    ]
     for n in [1..cock]
-      cock_count = Math.random() * cocks.size
+      cock_count = Math.random() * cocks.length
       random_cocks = cocks.shuffle()
-      train_of_cocks = cocks[..random_cocks].join(' ')
+      train_of_cocks = cocks[..cock_count].join(' ')
       msg.send train_of_cocks
 
 
