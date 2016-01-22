@@ -71,13 +71,15 @@ module.exports = (robot) ->
         msg.send images[0].link
 
   cock_bomb = (msg, cock) ->
-    cocks = ["cock.", "COCK", ".", "...", ". ", ".....", "Cock. Cock. Cock.", "COOOOCK!", 'COOOOOOCCCCCCCKKKK', 'cockadoodledoo', 'c o c k', 'small cock', 'LARGE COCK', '#8@!$', 'meh', 'dick dragon', ':dragon:', ':rooster:'
+    cocks = ["cock.", "COCK", ".", "...", ". ", ".....", "Cock. Cock. Cock.", "COOOOCK!", 'COOOOOOCCCCCCCKKKK', 'cockadoodledoo', 'c o c k', 'small cock', 'LARGE COCK', '#8@!$', 'meh', 'dick dragon', ':dragon:', ':rooster:', 'chicago black cocks', 'oyster cocks', 'frozen mixed vegitable cocks', 'cocktastrophy', 'cock-con', ':shirt: :rooster:', 'slum cock', 'posh cock', 'tiananmen square cock', 'flaming cock', 'jew cock', 'orthodox cocks', 'orthodix jews... cocks', 'the cock awakens', 'return of the cock', 'the cock strikes back!!!!!!', 'the phantom ....   cock', 'attack of the cocks', 'revenge of the cocks', 'a new hope.... for cocks. ', 'cock wars', 'cock 1: a cock story'
     ]
+    cock_bank = ''
     for n in [1..cock]
       cock_count = Math.random() * cocks.length
       random_cocks = cocks.shuffle()
       train_of_cocks = cocks[..cock_count].join(' ')
-      msg.send train_of_cocks
+      cock_bank += ' ' + train_of_cocks
+    msg.send cock_bank
 
 
   # BOMBS! (titty bomb 5)
