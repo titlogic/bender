@@ -12,7 +12,6 @@
 # Commands:
 #   `bender [ass|tit|redhead|weed] me` - NCNN's hand picked keyword/gallery image search.
 #   `<query> bomb <n>` - NCNN's best bomb ever. Image bomb anything to your heart's content.
-#   `imgur me <query>` - NCNN's imgur search.
 #
 # Author:
 #  MCDIZZLE-MAFK!
@@ -47,11 +46,17 @@ module.exports = (robot) ->
         images = images.slice(0,count) # Limit
         if images && images.length > 0 && gallery
           msg.send "Hand picked gallery: " + gallery
-          msg.send image.link for image in images
+          str = ''
+          for image in images
+            str = str + "\n" + image.link
+          msg.send str
         else
           term = term.replace /bender /, ''
+          str = ''
           for i in [1..count]
-            imgur_me(msg, term)
+            str = str + "\n" + imgur_me(msg, term)
+          msg.send str
+
 
   image_me = (msg, gallery, term) ->
     msg.send "gallery: "+gallery
@@ -68,7 +73,7 @@ module.exports = (robot) ->
       .get() (err, res, body) ->
         images = JSON.parse(body).data # Full list of images
         images = images.shuffle() # Randomize
-        msg.send images[0].link
+        return images[0].link
 
   cock_bomb = (msg, cock) ->
     cocks = ["cock.", "COCK", ".", "...", ". ", ".....", "Cock. Cock. Cock.", "COOOOCK!", 'COOOOOOCCCCCCCKKKK', 'cockadoodledoo', 'c o c k', 'small cock', 'LARGE COCK', '#8@!$', 'meh', 'dick dragon', ':dragon:', ':rooster:', 'chicago black cocks', 'oyster cocks', 'frozen mixed vegitable cocks', 'cocktastrophy', 'cock-con', ':shirt: :rooster:', 'slum cock', 'posh cock', 'tiananmen square cock', 'flaming cock', 'jew cock', 'orthodox cocks', 'orthodix jews... cocks', 'the cock awakens', 'return of the cock', 'the cock strikes back!!!!!!', 'the phantom ....   cock', 'attack of the cocks', 'revenge of the cocks', 'a new hope.... for cocks. ', 'cock wars', 'cock 1: a cock story'
@@ -87,9 +92,9 @@ module.exports = (robot) ->
     term = msg.match[1]
     count = msg.match[3] || 5
     gallery = msg.random(termToGaleries(term))
-    msg.send term
     if term != 'cock' && term != 'bender cock'
-      image_bomb(msg, gallery, term, count)
+      str = image_bomb(msg, gallery, term, count)
+      msg.send str
     else
       cock_bomb(msg, count)
 
@@ -98,17 +103,3 @@ module.exports = (robot) ->
     term = msg.match[1]
     gallery = msg.random(termToGaleries(term))
     image_me(msg, gallery, term)
-
-  # Imgur me command
-  robot.hear /imgur me (.*)/i, (msg) ->
-    term = msg.match[1]
-    imgur_me(msg, term)
-
-
-
-
-
-
-
-
-
