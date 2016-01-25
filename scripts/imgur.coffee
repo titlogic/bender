@@ -87,6 +87,7 @@ module.exports = (robot) ->
     term = msg.match[1]
     count = msg.match[3] || 5
     gallery = msg.random(termToGaleries(term))
+    msg.send term
     if term != 'cock'
       image_bomb(msg, gallery, term, count)
     else
