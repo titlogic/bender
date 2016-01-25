@@ -78,7 +78,7 @@ module.exports = (robot) ->
       cock_count = Math.random() * cocks.length
       random_cocks = cocks.shuffle()
       train_of_cocks = cocks[..cock_count].join(' ')
-      cock_bank += ' ' + train_of_cocks
+      cock_bank = cock_bank + ' ' + train_of_cocks
     msg.send cock_bank
 
 
