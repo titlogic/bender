@@ -32,7 +32,7 @@ module.exports = (robot) ->
       ["redhead", "redheads", 'ginger']
     else if /\b(weed)\b/.test(term)
       ["weed", 'trees', ]
-    else if /\b(weed|bud)\b/.test(term)
+    else if /\b(weed|bud|grass)\b/.test(term)
       ["marijuana|weed|420"]
     else
       []
