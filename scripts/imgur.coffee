@@ -24,38 +24,38 @@ module.exports = (robot) ->
   # Maping of keyword triggers to imgur subredits:
   termToGaleries = (term) ->
     galleries = if /\b(ass)\b/.test(term)
-      ["ass", "butt", 'girlsinyogapants', 'assinthong', 'TightShorts', 'twerking', 'twerk', 'assinthong', 'TightShorts']
+      ["ass", "butt", 'girlsinyogapants', 'assinthong', 'TightShorts', 'twerking', 'twerk', 'assinthong', 'TightShorts', 'panties', 'panty', 'thong']
     else if /\b(tit|boob)\b/.test(term)
-      ["titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans', 'GoneMild', 'OnOff', 'realgirls', 'rule34', 'hugeboobs', 'ToplessInJeans']
+      ["titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans', 'GoneMild', 'OnOff', 'realgirls', 'rule34', 'hugeboobs', 'ToplessInJeans', 'underboob', 'sideboob']
     else if /\b(redhead)\b/.test(term)
       ["redhead", "redheads", 'ginger']
-    else if /\b(weed)\b/.test(term)
-      ["weed", 'trees', ]
-    else if /\b(weed|bud|grass)\b/.test(term)
-      ["marijuana|weed|420"]
+    else if /\b(weed|bud|grass|dank)\b/.test(term)
+      ["marijuana", "weed", "420", "trees"]
     else
       []
     return galleries
 
   image_bomb = (msg, gallery, term, count) ->
-    msg.http('https://api.imgur.com/3/gallery/r/'+gallery)
+    robot.http('https://api.imgur.com/3/gallery/r/'+gallery)
       .headers(Authorization: client_id)
       .get() (err, res, body) ->
-        images = JSON.parse(body).data # Full list of images
-        images = images.shuffle() # Randomize
-        images = images.slice(0,count) # Limit
-        if images && images.length > 0 && gallery
-          msg.send "Hand picked gallery: " + gallery
-          str = ''
-          for image in images
-            str = str + "\n" + image.link
-          msg.send str
+        if err
+          str = "FML. Error: #{err}"
         else
-          term = term.replace /bender /, ''
-          str = ''
-          for i in [1..count]
-            str = str + "\n" + imgur_me(msg, term)
-          msg.send str
+          images = JSON.parse(body).data # Full list of images
+          images = images.shuffle() # Randomize
+          images = images.slice(0,count) # Limit
+          if images && images.length > 0 && gallery
+            msg.send "OOh, lets go with: " + gallery
+            str = ''
+            for image in images
+              str = str + "\n" + image.link
+          else
+            term = term.replace /bender /, ''
+            str = ''
+            for i in [1..count]
+              str = str + "\n" + imgur_me(msg, term)
+          msg.send('unfurl_media' + '\n' + str)
 
 
   image_me = (msg, gallery, term) ->
@@ -63,22 +63,30 @@ module.exports = (robot) ->
     msg.http('https://api.imgur.com/3/gallery/r/'+gallery)
       .headers(Authorization: client_id)
       .get() (err, res, body) ->
-        images = JSON.parse(body).data # Full list of images
-        images = images.shuffle() # Randomize
-        msg.send images[0].link
+        if err
+          str = "FML. Error: #{err}"
+        else
+          images = JSON.parse(body).data # Full list of images
+          images = images.shuffle() # Randomize
+          str = images[0].link
+        msg.send(str)
 
   imgur_me = (msg, term) ->
     msg.http('https://api.imgur.com/3/gallery/r/'+term)
       .headers(Authorization: client_id)
       .get() (err, res, body) ->
-        images = JSON.parse(body).data # Full list of images
-        images = images.shuffle() # Randomize
-        return images[0].link
+        if err
+          str = "FML. Error: #{err}"
+        else
+          images = JSON.parse(body).data # Full list of images
+          images = images.shuffle() # Randomize
+          str = images[0].link
+        msg.send(str)
 
   cock_bomb = (msg, cock) ->
     cocks = [".", "...", ". ", ".....", "  ", "   ", "", "    ",
       "cock.", "COCK", "Cock. Cock. Cock.", "COOOOCK!", 'COOOOOOCCCCCCCKKKK',
-      ':rooster:', ':shirt: :rooster:', ':eggplant:', ':banana:', ':horse: :rooster:', ':snake:', ':chicken:', ':rage1:', ':droplet:', ':crying_cat_face:', ':poop: :rooster', ':sweat_drops:', ':sweat_smile:', ':sweat:', ':stuck_out_tongue_winking_eye:', ':lollipop:', ':dildo:', ':heavy_exclamation_mark:', ':fried_shrimp: :rooster:', ':open_mouth:', ':fist:', ':fist: :briefcase:',
+      ':rooster:', ':shirt: :rooster:', ':eggplant:', ':banana:', ':horse: :rooster:', ':snake:', ':chicken:', ':rage1:', ':droplet:', ':crying_cat_face:', ':poop: :rooster:', ':sweat_drops:', ':sweat_smile:', ':sweat:', ':stuck_out_tongue_winking_eye:', ':lollipop:', ':dildo:', ':heavy_exclamation_mark:', ':fried_shrimp: :rooster:', ':open_mouth:', ':fist:', ':fist: :briefcase:',
       'cockadoodledoo', 'c o c k', 'small cock', 'LARGE COCK', '#8@!$', 'meh', 'dick dragon', 'chicago black cocks', 'oyster cocks', 'frozen mixed vegitable cocks', 'cocktastrophy', 'cock-con', 'slum cock', 'posh cock', 'tiananmen square cock', 'flaming cock', 'jew cock', 'orthodox cocks', 'orthodix jews... cocks',
       'the cock awakens', 'return of the cock', 'the cock strikes back!!!!!!', 'the phantom ....   cock', 'attack of the cocks', 'revenge of the cocks', 'a new hope.... for cocks. ', 'cock wars', 'cock 1: a cock story',
       'black cock down', 'random cock', 'famous cock',
@@ -90,7 +98,7 @@ module.exports = (robot) ->
       cock_count = Math.random() * cocks.length
       random_cocks = cocks.shuffle()
       cock_bank = cock_bank + ' ' + cocks[0]
-    msg.send cock_bank
+    return cock_bank
 
 
   # BOMBS! (titty bomb 5)
@@ -99,8 +107,7 @@ module.exports = (robot) ->
     count = msg.match[3] || 5
     gallery = msg.random(termToGaleries(term))
     if term != 'cock' && term != 'bender cock'
-      str = image_bomb(msg, gallery, term, count)
-      msg.send str
+      image_bomb(msg, gallery, term, count)
     else
       cock_bomb(msg, count)
 
