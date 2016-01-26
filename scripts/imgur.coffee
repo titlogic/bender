@@ -109,7 +109,7 @@ module.exports = (robot) ->
     if term != 'cock' && term != 'bender cock'
       image_bomb(msg, gallery, term, count)
     else
-      cock_bomb(msg, count)
+      msg.send(cock_bomb(msg, count))
 
   # Single images (bender boob me)
   robot.respond /(.*?) me/i, (msg) ->
