@@ -49,13 +49,13 @@ module.exports = (robot) ->
             msg.send "OOh, lets go with: " + gallery
             str = ''
             for image in images
-              str = str + "\n" + image.link
+              msg.send image.link
           else
             term = term.replace /bender /, ''
             str = ''
             for i in [1..count]
-              str = str + "\n" + imgur_me(msg, term)
-          msg.send('unfurl_media' + '\n' + str)
+              msg.send imgur_me(msg, term)
+
 
 
   image_me = (msg, gallery, term) ->
