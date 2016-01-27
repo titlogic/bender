@@ -14,7 +14,7 @@
 #   `<query> bomb <n>` - NCNN's best bomb ever. Image bomb anything to your heart's content.
 #
 # Author:
-#  MCDIZZLE-MAFK!
+#  TITLOGIC
 
 Array::shuffle = -> @sort -> 0.5 - Math.random()
 module.exports = (robot) ->

@@ -18,7 +18,7 @@
 #   None
 #
 # Author:
-#   MCDIZZLE
+#   TITLOGIC
 module.exports = (robot) ->
 
   # HEY BENDER
