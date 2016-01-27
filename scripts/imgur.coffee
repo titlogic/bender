@@ -56,8 +56,6 @@ module.exports = (robot) ->
             for i in [1..count]
               msg.send imgur_me(msg, term)
 
-
-
   image_me = (msg, gallery, term) ->
     msg.send "gallery: "+gallery
     msg.http('https://api.imgur.com/3/gallery/r/'+gallery)
@@ -100,11 +98,14 @@ module.exports = (robot) ->
       cock_bank = cock_bank + ' ' + cocks[0]
     return cock_bank
 
-
   # BOMBS! (titty bomb 5)
   robot.hear /\b(.*?)\b bomb( (\d+))?/i, (msg) ->
     term = msg.match[1]
     count = msg.match[3] || 5
+    if count > 20
+      count = 20
+      msg.send 'You greedy bastard. I work for free god damnit.'
+      return
     gallery = msg.random(termToGaleries(term))
     if term != 'cock' && term != 'bender cock'
       image_bomb(msg, gallery, term, count)
