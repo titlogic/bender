@@ -14,7 +14,7 @@
 #   None
 #
 # Author:
-#   carmstrong & MCDIZZLE
+#   TITLOGIC
 
 jroc = [
   "There's 2 things mafukas gonna know about J-to-the-ROC: I spin more rhymes than a lazy Susan, and I'm innocent until mah guilt is proven! Peace! Representin' Sunnyvale, straight-the-fuck-up.",
@@ -42,7 +42,6 @@ jroc = [
   "he mafk'n blew himselves up.",
   "I was down with Ray, dawg. Dat old fuckin' white boy...",
   "I'm gonna axe 'em for ya right quick.",
-
 ]
 
 ricky = [
@@ -181,7 +180,6 @@ ricky = [
   "Ahhhh hhhhuuuaahhhhhhhhh!",
   "Don't fuckin' shush me.",
   "It fuckin' sucks.",
-
 ]
 
 lahey = [
@@ -224,7 +222,6 @@ lahey = [
   "Yeah, well I invited myself. ",
   "But when he shits... he still shits in the park.",
   "Livin' the fuckin dream afghanarandy.",
-
 ]
 
 bubbles = [
