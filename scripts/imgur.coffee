@@ -26,7 +26,6 @@
 
 Array::shuffle = -> @sort -> 0.5 - Math.random()
 module.exports = (robot) ->
-
   client_id = 'Client-ID ' + process.env.IMGUR_CLIENT_ID
 
   # Maping of keyword triggers to imgur subredits:
@@ -184,7 +183,6 @@ safeSearchValue = (msg) ->
     msg.send msg.random(warnings)
   str
 
-
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
   cb = faces if typeof faces == 'function'
@@ -233,7 +231,6 @@ imageMe = (msg, query, animated, faces, cb) ->
             msg.robot.logger
               .error "(see #{error.extendedHelp})" if error.extendedHelp
           ) error for error in response.error.errors if response.error?.errors
-
 
 # Forces giphy result to use animated version
 ensureResult = (url, animated) ->
