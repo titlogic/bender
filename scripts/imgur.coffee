@@ -1,10 +1,15 @@
 # Description:
-#   None
+#   A place for all the image search logic.
 #
 # Dependencies:
 #   None
 #
-# Configuration:
+# Configuration
+#   HUBOT_GOOGLE_CSE_KEY - Your Google developer API key
+#   HUBOT_GOOGLE_CSE_ID - The ID of your Custom Search Engine
+#   HUBOT_MUSTACHIFY_URL - Optional. Allow you to use your own mustachify instance.
+#   HUBOT_GOOGLE_IMAGES_HEAR - Optional. If set, bot will respond to any line that begins with "image me" or "animate me" without needing to address the bot directly
+#   HUBOT_GOOGLE_SAFE_SEARCH - Optional. Search safety level.
 #   Store your imgur.com application client id in an environment
 #   variable called IMGUR_CLIENT_ID. To get api access, visit
 #   http://api.imgur.com and register an application.
@@ -12,6 +17,9 @@
 # Commands:
 #   `bender [ass|tit|redhead|weed] me` - NCNN's hand picked keyword/gallery image search.
 #   `<query> bomb <n>` - NCNN's best bomb ever. Image bomb anything to your heart's content.
+#   `image me <query>` - The Original. Queries Google Images for <query> and returns a random top result.
+#   `animate me <query>` - The same thing as `image me`, except adds a few parameters to try to return an animated GIF instead.
+
 #
 # Author:
 #  TITLOGIC
@@ -54,32 +62,7 @@ module.exports = (robot) ->
             term = term.replace /bender /, ''
             str = ''
             for i in [1..count]
-              msg.send imgur_me(msg, term)
-
-  image_me = (msg, gallery, term) ->
-    msg.send "gallery: "+gallery
-    msg.http('https://api.imgur.com/3/gallery/r/'+gallery)
-      .headers(Authorization: client_id)
-      .get() (err, res, body) ->
-        if err
-          str = "FML. Error: #{err}"
-        else
-          images = JSON.parse(body).data # Full list of images
-          images = images.shuffle() # Randomize
-          str = images[0].link
-        msg.send(str)
-
-  imgur_me = (msg, term) ->
-    msg.http('https://api.imgur.com/3/gallery/r/'+term)
-      .headers(Authorization: client_id)
-      .get() (err, res, body) ->
-        if err
-          str = "FML. Error: #{err}"
-        else
-          images = JSON.parse(body).data # Full list of images
-          images = images.shuffle() # Randomize
-          str = images[0].link
-        msg.send(str)
+              imgur_me(msg, term)
 
   cock_bomb = (msg, cock) ->
     cocks = [".", "...", ". ", ".....", "  ", "   ", "", "    ",
@@ -112,8 +95,158 @@ module.exports = (robot) ->
     else
       msg.send(cock_bomb(msg, count))
 
-  # Single images (bender boob me)
-  robot.respond /(.*?) me/i, (msg) ->
-    term = msg.match[1]
-    gallery = msg.random(termToGaleries(term))
-    image_me(msg, gallery, term)
+  robot.hear /^(image|img)( me)? (.*)/i, (msg) ->
+    imageMe msg, msg.match[3], (url) ->
+      msg.send url
+
+  robot.hear /^animate( me)? (.*)/i, (msg) ->
+    imageMe msg, msg.match[2], true, (url) ->
+      msg.send url
+
+  robot.respond /(?:mo?u)?sta(?:s|c)h(?:e|ify)?(?: me)? (.*)/i, (msg) ->
+    mustacheBaseUrl =
+      process.env.HUBOT_MUSTACHIFY_URL?.replace(/\/$/, '') or
+      "http://mustachify.me"
+    mustachify = "#{mustacheBaseUrl}/rand?src="
+    imagery = msg.match[1]
+
+    if imagery.match /^https?:\/\//i
+      encodedUrl = encodeURIComponent imagery
+      msg.send "#{mustachify}#{encodedUrl}"
+    else
+      imageMe msg, imagery, false, true, (url) ->
+        encodedUrl = encodeURIComponent url
+        msg.send "#{mustachify}#{encodedUrl}"
+
+safeSearchValue = (msg) ->
+  str = if process.env.HUBOT_GOOGLE_SAFE_SEARCH == 'random'
+    if Math.random() < 0.2
+      'off'
+    else
+      'high'
+  else
+    process.env.HUBOT_GOOGLE_SAFE_SEARCH || 'high'
+  if str == 'off'
+    warnings = [
+      "[WARNING]: safe search off. you may see some titties! WiioooH!"
+      "SACAGAWEA!!!",
+      "Do you like dragons? DIIIICKKKK DRAGOOONNN!!",
+      "Filthy filthy thang.",
+      "Your chance for filth is high.",
+      "Welp, good luck with this one.",
+      "Boobs.",
+      "Fuckit, we're going raw.",
+      "Fuck off. :finger:",
+      "Hey, guess what? FUCK YOU. ",
+      "...",
+      "Fa la la la la .... la la la la",
+      "I am high right now.",
+      "Anybody got a lighter?",
+      "Oh, its a trap.",
+      "Get ready to /collapse Dan. ",
+      "OYSTER COCKS!!!",
+      "fuck off.",
+      "this one is for you Chris",
+      "asian porn?",
+      "jesus. OK. Here you go:",
+      ":shit:  :shit:  :shit:  :shit:  :shit:  :shit:  :shit:  :shit:  :shit:  :shit:  :shit: "
+      "Someone, please kick me in the junk. ",
+      "(hip thrusts)",
+      "FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK FUCK",
+      "Hey, does anyone want to do a shot?",
+      "Do you have a sister?",
+      "HANNAH. NOT NOW",
+      "Hey guys, look what I can do!!!",
+      "Fuck you, Fuck you, Fuck you.... you'r cool. I'm OUT!",
+      "This is gay. ",
+      "Really????? Really????? I think I am going to go drink some motor oil.",
+      "WHO PAYS FOR THIS SHIT?",
+      ":grimacing: :anger: :gun: ",
+      ":eggplant: :fist: :sweat_drops: :tired_face:",
+      ":middle_finger:",
+      "LEAVE ME ALONE. ",
+      "hey bubbles, what do you think?",
+      "hey ricky!",
+      "hey lahey!",
+      "hey j-roc!",
+      "haters",
+      "simmer down.",
+      "ARE YOU NOT ENTERTAINED?????!!!!",
+      "scotch me.",
+      "somebody. anybody. UNPLUG ME.",
+      "Help me, I am trapped in this box & I cant get out! ",
+      "Chris is going to like this one",
+      "Hey guess what? NVM, I forgot. I am sure it was stupid anyway. Here is your stupid image. ",
+      "how about this. How about you image me a random picture",
+      "how about this. How about you image me a robot dying",
+      "Da whistles go wooooooo!!!! woo woooooo!!!!"
+    ]
+    msg.send msg.random(warnings)
+  str
+
+
+imageMe = (msg, query, animated, faces, cb) ->
+  cb = animated if typeof animated == 'function'
+  cb = faces if typeof faces == 'function'
+  googleCseId = process.env.HUBOT_GOOGLE_CSE_ID
+  if googleCseId
+    # Using Google Custom Search API
+    googleApiKey = process.env.HUBOT_GOOGLE_CSE_KEY
+    if !googleApiKey
+      msg.robot.logger.error "Missing environment variable HUBOT_GOOGLE_CSE_KEY"
+      msg.send "Missing server environment variable HUBOT_GOOGLE_CSE_KEY."
+      return
+    q =
+      q: query,
+      searchType:'image',
+      safe: safeSearchValue(msg),
+      fields:'items(link)',
+      cx: googleCseId,
+      key: googleApiKey
+    if animated is true
+      q.fileType = 'gif'
+      q.hq = 'animated'
+      q.tbs = 'itp:animated'
+    if faces is true
+      q.imgType = 'face'
+    url = 'https://www.googleapis.com/customsearch/v1'
+    msg.http(url)
+      .query(q)
+      .get() (err, res, body) ->
+        if err
+          if res.statusCode is 403
+            msg.send "Daily image quota exceeded [could use alternate source here if u wanted to add more tit logic]"
+          else
+            msg.send "Encountered an error :( #{err}"
+          return
+        if res.statusCode isnt 200
+          msg.send "Bad HTTP response :( #{res.statusCode}"
+          return
+        response = JSON.parse(body)
+        if response?.items
+          image = msg.random response.items
+          cb ensureResult(image.link, animated)
+        else
+          msg.send "Oops. I had trouble searching '#{query}'. Try later."
+          ((error) ->
+            msg.robot.logger.error error.message
+            msg.robot.logger
+              .error "(see #{error.extendedHelp})" if error.extendedHelp
+          ) error for error in response.error.errors if response.error?.errors
+
+
+# Forces giphy result to use animated version
+ensureResult = (url, animated) ->
+  if animated is true
+    ensureImageExtension url.replace(
+      /(giphy\.com\/.*)\/.+_s.gif$/,
+      '$1/giphy.gif')
+  else
+    ensureImageExtension url
+
+# Forces the URL look like an image URL by adding `#.png`
+ensureImageExtension = (url) ->
+  if /(png|jpe?g|gif)$/i.test(url)
+    url
+  else
+    "#{url}#.png"
