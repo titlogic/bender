@@ -38,6 +38,13 @@ module.exports = (robot) ->
       ["redhead", "redheads", 'ginger']
     else if /\b(weed|bud|grass|dank)\b/.test(term)
       ["marijuana", "weed", "420", "trees"]
+    else if /\b(random)\b/.test(term)
+      # This is lazy but I dont care right now.
+      #  Maybe its a feature? (custom random list). Ignore that it is a copy and paste from above.
+      [ "ass", "butt", 'girlsinyogapants', 'assinthong', 'TightShorts', 'twerking', 'twerk', 'assinthong', 'TightShorts', 'panties', 'panty', 'thong',
+        "titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans', 'GoneMild', 'OnOff', 'realgirls', 'rule34', 'hugeboobs', 'ToplessInJeans', 'underboob', 'sideboob',
+        "redhead", "redheads", 'ginger'
+      ]
     else
       []
     return galleries
