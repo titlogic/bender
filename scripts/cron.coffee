@@ -3,24 +3,12 @@
 # Dependencies:
 #   cron, time
 
+HubotCron = require 'hubot-cronjob'
+
 module.exports = (robot) ->
-  cronJob = require('cron').CronJob
   tz = 'America/Los_Angeles'
-  # new cronJob('0 0 9 * * 1-5', workdaysNineAm, null, true, tz)
-  # new cronJob('0 */5 * * * *', everyFiveMinutes, null, true, tz)
-  new cronJob('0 */5 * * * *', everyMinute, null, true, tz)
-
-  # room = 12345678
-
-  everyMinute = ->
-    robot.emit 'imagesearch', 'Shell'
 
 
-
-
-  # workdaysNineAm = ->
-  #   robot.emit 'slave:command', 'wake everyone up', room
-
-  # everyFiveMinutes = ->
-  #   robot.messageRoom room, 'I will nag you every 5 minutes'
-
+  testCronMethod = () ->
+    robot.emit 'imagesearch', 'dat_ass'
+  new HubotCron '*/10 * * * *', tz, testCronMethod # Every 10 minutes
