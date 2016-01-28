@@ -71,8 +71,15 @@ module.exports = (robot) ->
           images = JSON.parse(body).data # Full list of images
           images = images.shuffle() # Randomize
           images = images.slice(0,count) # Limit
-          for image in images
-            msg.send image.link
+          if images.length > 1
+            for image in images
+              msg.send image.link
+          else
+            msg.send "Nothing on imgur, falling back to google image search for: " + term
+            for n in [1..count]
+              imageMe msg, term, (url) ->
+                msg.send url
+
 
   cock_bomb = (msg, cock) ->
     cocks = [".", "...", ". ", ".....", "  ", "   ", "", "    ",
@@ -112,21 +119,6 @@ module.exports = (robot) ->
   robot.hear /^animate( me)? (.*)/i, (msg) ->
     imageMe msg, msg.match[2], true, (url) ->
       msg.send url
-
-  robot.respond /(?:mo?u)?sta(?:s|c)h(?:e|ify)?(?: me)? (.*)/i, (msg) ->
-    mustacheBaseUrl =
-      process.env.HUBOT_MUSTACHIFY_URL?.replace(/\/$/, '') or
-      "http://mustachify.me"
-    mustachify = "#{mustacheBaseUrl}/rand?src="
-    imagery = msg.match[1]
-
-    if imagery.match /^https?:\/\//i
-      encodedUrl = encodeURIComponent imagery
-      msg.send "#{mustachify}#{encodedUrl}"
-    else
-      imageMe msg, imagery, false, true, (url) ->
-        encodedUrl = encodeURIComponent url
-        msg.send "#{mustachify}#{encodedUrl}"
 
 safeSearchValue = (msg) ->
   str = if process.env.HUBOT_GOOGLE_SAFE_SEARCH == 'random'
