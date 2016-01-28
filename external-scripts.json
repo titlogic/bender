@@ -4,5 +4,6 @@
   "hubot-redis-brain",
   "hubot-trello",
   "hubot-cron",
-  "hubot-plusplus"
+  "hubot-plusplus",
+  "hubot-cleverbot"
 ]
