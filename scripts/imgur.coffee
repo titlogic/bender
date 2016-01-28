@@ -31,13 +31,15 @@ module.exports = (robot) ->
   # Maping of keyword triggers to imgur subredits:
   termToGaleries = (term) ->
     galleries = if /\b(ass)\b/.test(term)
-      ["ass", "butt", 'girlsinyogapants', 'assinthong', 'TightShorts', 'twerking', 'twerk', 'assinthong', 'TightShorts', 'panties', 'panty', 'thong']
+      ["ass", 'asstastic', "butt", 'girlsinyogapants', 'assinthong', 'TightShorts', 'twerking', 'twerk', 'assinthong', 'TightShorts', 'panties', 'panty', 'thong', 'slutsbedrunk', 'springbreakers']
     else if /\b(tit|boob)\b/.test(term)
-      ["titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans', 'GoneMild', 'OnOff', 'realgirls', 'rule34', 'hugeboobs', 'ToplessInJeans', 'underboob', 'sideboob']
+      ["titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans', 'GoneMild', 'OnOff', 'realgirls', 'rule34', 'hugeboobs', 'ToplessInJeans', 'underboob', 'sideboob', 'babes', 'blondes', 'Boobies', 'breasts', 'brunette', 'burstingout', 'bustybabes', 'bustypetite' ]
     else if /\b(redhead)\b/.test(term)
       ["redhead", "redheads", 'ginger']
     else if /\b(weed|bud|grass|dank)\b/.test(term)
       ["marijuana", "weed", "420", "trees"]
+    else if /\b(fuck|fucking|xxx|porn)\b/.test(term)
+      ["pornstars", "AmateurArchives", 'AsianCuties', 'asianhotties', 'AsiansGoneWild', 'blowjob', 'blowjobs', 'bonermaterial']
     else if /\b(random)\b/.test(term)
       # This is lazy but I dont care right now.
       #  Maybe its a feature? (custom random list). Ignore that it is a copy and paste from above.
