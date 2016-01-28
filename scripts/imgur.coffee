@@ -127,6 +127,21 @@ module.exports = (robot) ->
     imageMe msg, msg.match[2], true, (url) ->
       msg.send url
 
+  # room scheduled bombs
+  robot.on 'imagesearch', (room) ->
+    count = 5
+    term = 'random'
+    gallery = termToGaleries(term).shuffle()[0]
+    robot.http('https://api.imgur.com/3/gallery/r/'+gallery)
+      .headers(Authorization: client_id)
+      .get() (err, res, body) ->
+        images = JSON.parse(body).data # Full list of images
+        images = images.shuffle().slice(0,count) # Limit
+        robot.messageRoom room, "Gallery: " + gallery
+        for image in images
+          robot.messageRoom room, image.link
+
+
 safeSearchValue = (msg) ->
   str = if process.env.HUBOT_GOOGLE_SAFE_SEARCH == 'random'
     if Math.random() < 0.2
