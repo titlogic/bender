@@ -129,7 +129,7 @@ module.exports = (robot) ->
 
   # room scheduled bombs
   robot.on 'imagesearch', (room) ->
-    count = 5
+    count = process.env.HUBOT_CRON_IMAGE_COUNT || 5
     term = 'random'
     gallery = termToGaleries(term).shuffle()[0]
     robot.http('https://api.imgur.com/3/gallery/r/'+gallery)
