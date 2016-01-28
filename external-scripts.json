@@ -3,7 +3,5 @@
   "hubot-heroku-keepalive",
   "hubot-redis-brain",
   "hubot-trello",
-  "hubot-cron",
-  "cron",
-  "time"
+  "hubot-cron"
 ]
