@@ -59,11 +59,9 @@ module.exports = (robot) ->
               msg.send image.link
           else
             term = term.replace /bender /, ''
-            str = ''
-            for i in [1..count]
-              imgur_me(msg, term)
+            imgur_me(msg, term, count)
 
-  imgur_me = (msg, term) ->
+  imgur_me = (msg, term, count) ->
     msg.http('https://api.imgur.com/3/gallery/r/'+term)
       .headers(Authorization: client_id)
       .get() (err, res, body) ->
@@ -72,8 +70,9 @@ module.exports = (robot) ->
         else
           images = JSON.parse(body).data # Full list of images
           images = images.shuffle() # Randomize
-          str = images[0].link
-        msg.send(str)
+          images = images.slice(0,count) # Limit
+          for image in images
+            msg.send image.link
 
   cock_bomb = (msg, cock) ->
     cocks = [".", "...", ". ", ".....", "  ", "   ", "", "    ",
