@@ -63,6 +63,18 @@ module.exports = (robot) ->
             for i in [1..count]
               imgur_me(msg, term)
 
+  imgur_me = (msg, term) ->
+    msg.http('https://api.imgur.com/3/gallery/r/'+term)
+      .headers(Authorization: client_id)
+      .get() (err, res, body) ->
+        if err
+          str = "FML. Error: #{err}"
+        else
+          images = JSON.parse(body).data # Full list of images
+          images = images.shuffle() # Randomize
+          str = images[0].link
+        msg.send(str)
+
   cock_bomb = (msg, cock) ->
     cocks = [".", "...", ". ", ".....", "  ", "   ", "", "    ",
       "cock.", "COCK", "Cock. Cock. Cock.", "COOOOCK!", 'COOOOOOCCCCCCCKKKK',
