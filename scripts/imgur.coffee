@@ -127,6 +127,10 @@ module.exports = (robot) ->
     imageMe msg, msg.match[2], true, (url) ->
       msg.send url
 
+
+  robot.on 'imagesearch', (room) ->
+    robot.messageRoom room, 'cock.'
+
 safeSearchValue = (msg) ->
   str = if process.env.HUBOT_GOOGLE_SAFE_SEARCH == 'random'
     if Math.random() < 0.2
