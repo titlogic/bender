@@ -1,3 +1,5 @@
+# Description:
+#   bender just says hi when you hit up /
 template = (name, response) ->
 
   """
