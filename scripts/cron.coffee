@@ -11,4 +11,4 @@ module.exports = (robot) ->
 
   testCronMethod = () ->
     robot.emit 'imagesearch', 'dat_ass'
-  new HubotCron '*/10 * * * *', tz, testCronMethod # Every 10 minutes
+  new HubotCron '*/60 * * * *', tz, testCronMethod # Every 10 minutes
