@@ -163,6 +163,7 @@ safeSearchValue = (msg) ->
       "Fuckit, we're going raw.",
       "Fuck off. :finger:",
       "Hey, guess what? FUCK YOU. ",
+      "Awwwww shucky ducky now!",
       "...",
       "Fa la la la la .... la la la la",
       "I am high right now.",
