@@ -110,7 +110,7 @@ module.exports = (robot) ->
   robot.hear /\b(.*?)\b bomb( (\d+))?/i, (msg) ->
     term = msg.match[1]
     count = msg.match[3] || 5
-    if count > 20
+    if count > 20 & term != 'cock'
       count = 20
       msg.send 'You greedy bastard. I work for free god damnit.'
       return
