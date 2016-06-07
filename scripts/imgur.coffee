@@ -58,9 +58,9 @@ module.exports = (robot) ->
           str = "FML. Error: #{err}"
         else
           images = JSON.parse(body).data # Full list of images
-          images = images.shuffle() # Randomize
-          images = images.slice(0,count) # Limit
           if images && images.length > 0 && gallery
+            images = images.shuffle() # Randomize
+            images = images.slice(0,count) # Limit
             msg.send "OOh, lets go with: " + gallery
             str = ''
             for image in images
@@ -77,9 +77,9 @@ module.exports = (robot) ->
           str = "FML. Error: #{err}"
         else
           images = JSON.parse(body).data # Full list of images
-          images = images.shuffle() # Randomize
-          images = images.slice(0,count) # Limit
           if images.length > 1
+            images = images.shuffle() # Randomize
+            images = images.slice(0,count) # Limit
             for image in images
               msg.send image.link
           else
@@ -112,7 +112,7 @@ module.exports = (robot) ->
     count = msg.match[3] || 5
     if count > 20 & term != 'cock'
       count = 20
-      msg.send 'You greedy bastard. I work for free god damnit.'
+      msg.send 'You greedy bastard. I work for free god damnit. Term: "' + term + '"'
       return
     gallery = msg.random(termToGaleries(term))
     if term != 'cock' && term != 'bender cock'
