@@ -109,6 +109,12 @@ module.exports = (robot) ->
   # BOMBS! (titty bomb 5)
   robot.hear /\b(.*?)\b bomb( (\d+))?/i, (msg) ->
     term = msg.match[1]
+
+    if term.split(' ').length > 5
+      # most likely the bomb was by mistake since the term is multiple words
+      # do nothing.
+      return
+
     count = msg.match[3] || 5
     if count > 20 & term != 'cock'
       count = 20
