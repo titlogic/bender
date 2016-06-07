@@ -93,11 +93,11 @@ module.exports = (robot) ->
     cocks = [".", "...", ". ", ".....", "  ", "   ", "", "    ",
       "cock.", "COCK", "Cock. Cock. Cock.", "COOOOCK!", 'COOOOOOCCCCCCCKKKK',
       ':rooster:', ':shirt: :rooster:', ':eggplant:', ':banana:', ':horse: :rooster:', ':snake:', ':chicken:', ':rage1:', ':droplet:', ':crying_cat_face:', ':poop: :rooster:', ':sweat_drops:', ':sweat_smile:', ':sweat:', ':stuck_out_tongue_winking_eye:', ':lollipop:', ':dildo:', ':heavy_exclamation_mark:', ':fried_shrimp: :rooster:', ':open_mouth:', ':fist:', ':fist: :briefcase:',
+      ':cock-angel:', ':cock-brown:', ':cock-cowboy:', ':cock-greek:', ':cock-hippie:', ':cock-jump:', ':cock-monster:', ':cock-mrt:', ':cock-ninja:', ':cock-old:', ':cock-washington:', ':cock-wizard:',
       'cockadoodledoo', 'c o c k', 'small cock', 'LARGE COCK', '#8@!$', 'meh', 'dick dragon', 'chicago black cocks', 'oyster cocks', 'frozen mixed vegitable cocks', 'cocktastrophy', 'cock-con', 'slum cock', 'posh cock', 'tiananmen square cock', 'flaming cock', 'jew cock', 'orthodox cocks', 'orthodix jews... cocks',
       'the cock awakens', 'return of the cock', 'the cock strikes back!!!!!!', 'the phantom ....   cock', 'attack of the cocks', 'revenge of the cocks', 'a new hope.... for cocks. ', 'cock wars', 'cock 1: a cock story',
       'black cock down', 'random cock', 'famous cock',
-      '200: cock OK', '201: cock created', '301: cock moved', '404: cock not found', '406: cock not acceptable', '500: internal cock error', '503: cock unavailable',
-      'cockblock'
+      '200: cock OK', '201: cock created', '301: cock moved', '404: cock not found', '406: cock not acceptable', '500: internal cock error', '503: cock unavailable', 'cockblock', 'cock cock, who\'s there?'
     ]
     cock_bank = ''
     for n in [1..cock]
