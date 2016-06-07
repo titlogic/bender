@@ -107,7 +107,7 @@ module.exports = (robot) ->
     return cock_bank
 
   # BOMBS! (titty bomb 5)
-  robot.hear /\b(.*?)\b bomb( (\d+))?/i, (msg) ->
+  robot.hear /\b(.*?)\b bomb( (\d+))?$/i, (msg) ->
     term = msg.match[1]
 
     if term.split(' ').length > 5
