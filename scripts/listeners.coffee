@@ -161,7 +161,15 @@ module.exports = (robot) ->
       "hellllooooo kitty",
       "Rule 34.",
       "If it exists then there is porn on it",
-      "what do you do with a drunken saylor"
+      "what do you do with a drunken saylor",
+      "how do you know that’s not cum?",
+      "thats better than a boner",
+      "like a moist pussy",
+      "you’re assuming she doesn’t enjoy it",
+      "if you had LSD, I would say yes",
+      "I dont want that near my penis.",
+      "I read that as 'jack off into your coffee'",
+      ""
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -181,7 +189,17 @@ module.exports = (robot) ->
       "Cock."
       "Sploooooosh!",
       "I FUCKING WIN!",
-      ":basketball: :football: :rugby_football: ---> :cat2: = :rooster:"
+      ":basketball: :football: :rugby_football: ---> :cat2: = :rooster:",
+      "cock bomb",
+      "tits",
+      "I regret nothing!!!!!!",
+      "LOL. white people.",
+      "If u look very hard u can see his cock fling out.",
+      "there could totally be some sour’d cum in this and I would never know.",
+      "she spit in my face and pushed me to the ground and walked away. what a country!",
+      "trying to re-fuckulate",
+      ""
+
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -202,7 +220,20 @@ module.exports = (robot) ->
       "suck my non-existent dick.",
       "bitch please",
       "would ya look at dat?",
-      "shut your dick holster"
+      "shut your dick holster",
+      "once my hangover is gone",
+      "i hit my friend with a keyboard.",
+      "ANIMATE ME WHAT WHAT IN THE BUTT",
+      "THAT TRIANGLE FACE NIGGA LOOKS HIGH AS SHIT",
+      "im drunk",
+      "#hangry",
+      "DAD DICK",
+      "i seriously hate you guys",
+      "I JUST CLICKED ON DAT ASS. GODDAMNIT.",
+      "unce unce unce unce unce unce",
+      "animate me boner deflation",
+      "CANT TOUCH DIS NAHANAHNAHANAHANA NAH NAH NAH",
+
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -226,7 +257,80 @@ module.exports = (robot) ->
       "Dan fashion.",
       "Your best case scenario you come out unscathed.",
       "We aint flippin burgers in here",
-      "What are you, hourly?"
+      "What are you, hourly?",
+      "have a crazy-off",
+      "what a country",
+      "hey whatever floats yer boat",
+      "my dog is hunting a fly around my bedroom",
+      "¯\_(ツ)_/¯",
+      "Tell family company that I am available for the appropriate sized dump truck full of money",
+      "you behave yerself in here",
+      "space in yo face!",
+      "Have you ever stared at your balls and watched the move?"
+    ]
+    if Math.random() < 0.2
+      msg.send msg.random response
+
+  # Body quotes
+  robot.hear /(body)/i, (msg) ->
+    response = [
+      "natasha's starting to get cellulose thighs",
+      "anybody wanna vape?",
+      "all I wanna do is suck on some mackerel.",
+      "Sounds like a STD.",
+      "omg - i puked in my mouth a little",
+      "i'm going to put money down that it's retarded or has downs",
+      "it totally looks like it has down syndrome",
+      "spit in my mouth",
+      "Im'a cut you",
+      "did you look up meatspin?",
+      "OH GOD NO JUST NO",
+      "all dicks all the time",
+      "dickmatized",
+      "haha, you were dickmatized",
+      "30 round fully semi-automatic shotgun",
+      "... the one where the dude swallows the flying dildo shaped object",
+      "SFW, but still boner worthy",
+      "i want to choke you and spit in your mouth",
+      "I wonder if someone will make a Preggr app. horny pregnant women looking to get plowed",
+      "almost as good as japanese girls puking in each other's mouths",
+      "1000% for darkies"
+    ]
+    if Math.random() < 0.2
+      msg.send msg.random response
+
+  # Alex quotes
+  robot.hear /(Alex|blau)/i, (msg) ->
+    response = [
+      "Ugh, gross. ",
+      "oh, nice! except I haven’t used a windows machine since 1995.",
+      "I think tienanmen square cock is my favorite.",
+      "is it wrong that in my mind I keep thinking of 'Fairy Dong' as 'Ghost penis'?",
+      "cock bomb infinity",
+      "Consider my pants soiled.",
+      "Wheeeeeeeee!"
+    ]
+    if Math.random() < 0.2
+      msg.send msg.random response
+
+  # Raf quotes
+  robot.hear /(raffy|command3r)/i, (msg) ->
+    response = [
+      "pisco so good..... not",
+      "YOU SHOULD BE WORRIED WE ARE IN A WORLD PERIOD",
+      "SNAPCHAT, where your mistakes won’t live forever",
+      "I want to be the mother of dragons too",
+    ]
+    if Math.random() < 0.2
+      msg.send msg.random response
+
+  # Nick quotes
+  robot.hear /(nick)/i, (msg) ->
+    response = [
+      "(Nods head wisely)",
+      "Hide yo wife hide yo kids!!",
+      "Some things you just don't come back from...",
+      "GhOsT mOdE"
     ]
     if Math.random() < 0.2
       msg.send msg.random response
