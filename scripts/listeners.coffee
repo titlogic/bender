@@ -154,7 +154,7 @@ module.exports = (robot) ->
       msg.send msg.random response
 
   # Chris quotes
-  robot.hear /chris/i, (msg) ->
+  robot.hear /chris|saylor/i, (msg) ->
     response = [
       "get off the shitter!",
       "asian porn.",
@@ -175,7 +175,7 @@ module.exports = (robot) ->
       msg.send msg.random response
 
   # Shannon quotes
-  robot.hear /(shannon|shenanigan|shannonymous)/i, (msg) ->
+  robot.hear /(shannon|shenanigan|shannonymous|mcpherson)/i, (msg) ->
     response = [
       "Ya'll like dragons?",
       "Fully got a noner right now.",
@@ -239,7 +239,7 @@ module.exports = (robot) ->
       msg.send msg.random response
 
   # Dan quotes
-  robot.hear /(dan)/i, (msg) ->
+  robot.hear /(dan|toillion)/i, (msg) ->
     response = [
       "Night court.",
       "Pewwwwwwdipie!!!!!",
@@ -272,7 +272,7 @@ module.exports = (robot) ->
       msg.send msg.random response
 
   # Body quotes
-  robot.hear /(body)/i, (msg) ->
+  robot.hear /(body|taing)/i, (msg) ->
     response = [
       "natasha's starting to get cellulose thighs",
       "anybody wanna vape?",
@@ -325,7 +325,7 @@ module.exports = (robot) ->
       msg.send msg.random response
 
   # Nick quotes
-  robot.hear /(nick)/i, (msg) ->
+  robot.hear /(nick|zontos)/i, (msg) ->
     response = [
       "(Nods head wisely)",
       "Hide yo wife hide yo kids!!",
