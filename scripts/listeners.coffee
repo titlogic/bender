@@ -342,3 +342,17 @@ module.exports = (robot) ->
     ]
     if Math.random() < 0.2
       msg.send msg.random response
+
+
+
+  # robot.listen(
+  #   (message) ->
+  #     # match = message.match(/^[A-Z,!@#$%^&*()_+-=\?\/\s]+$/)
+  #     if message.match(/^[A-Z,!@#$%^&*()_+-=\?\/\s]+$/)
+  #       true
+  #     else
+  #       false
+  #   (response) ->
+  #     response.reply "U'RE DRUNK HANNAH!"
+  # )
+
