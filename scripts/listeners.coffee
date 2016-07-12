@@ -241,7 +241,7 @@ module.exports = (robot) ->
       "unce unce unce unce unce unce",
       "animate me boner deflation",
       "CANT TOUCH DIS NAHANAHNAHANAHANA NAH NAH NAH",
-
+      "WHAT IS THIS NOISE"
     ]
     if Math.random() < 0.2
       msg.send msg.random response
