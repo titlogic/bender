@@ -22,7 +22,7 @@
 module.exports = (robot) ->
 
   # HEY BENDER
-  robot.hear /^(hey )?bender(!)?$/i, (msg) ->
+  robot.hear /bender/i, (msg) ->
     response = [
       "bite my shiny metal ass",
       "*fap* *fap* *fap* *fap* ...",
@@ -139,15 +139,23 @@ module.exports = (robot) ->
       msg.send msg.random response
 
   # Lazy Bubb Rubb whistles
-  robot.hear /(whistles|whistlers|wh*?i+oo+h|woo+ woo+)/i, (msg) ->
+  robot.hear /(whistles|whistlers|wh*?i+oo+h|woo+ woo+|woo+)/i, (msg) ->
     response = [
       "its dat woo wooooo",
       "https://soundcloud.com/vibesquad/the-whistles",
       "http://i.imgur.com/KeepBS0.jpg",
       "http://24.media.tumblr.com/tumblr_lx31kykJQX1r2tufko1_400.jpg",
       "https://images.rapgenius.com/f0a9c81851ac310f1e8a745173b17126.500x373x17.gif",
+      "http://www.f150online.com/galleries/images/1910-3152-50803.jpg",
+      "http://i3.ytimg.com/vi/jpl_ey5cVnk/hqdefault.jpg",
+      "http://sd.keepcalm-o-matic.co.uk/i/the-whistles-go-woo-woo.png",
+      "http://image.spreadshirtmedia.com/image-server/v1/compositions/110660710/views/1,width=280,height=280,appearanceId=22,version=1440417743.png/the-whistles-go-woo-woooo_design.png",
+      "http://i3.ytimg.com/vi/R__2Zyqaweg/mqdefault.jpg",
+      "http://img23.photobucket.com/albums/v70/l3lizz4rd/missilesgowoowoo.jpg",
+      "http://www.black-ogre.com/blackogreonline/wp-content/uploads/2012/02/Whistle-Tips-They-Were-Being-Installed.jpg",
+      "http://www.angelfire.com/planet/whistletip/images/bubrubb4.jpg",
       "WIOOOH!!!!",
-      "https://s-media-cache-ak0.pinimg.com/736x/86/a3/c8/86a3c846b0ecdc82f1c86fb305239ead.jpg",
+
       "tits."
     ]
     if Math.random() < 0.2
