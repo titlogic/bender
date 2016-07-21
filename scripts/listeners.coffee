@@ -177,7 +177,8 @@ module.exports = (robot) ->
       "if you had LSD, I would say yes",
       "I dont want that near my penis.",
       "I read that as 'jack off into your coffee'",
-      ""
+      "fuck your slashes",
+      "Red Dragon"
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -206,8 +207,17 @@ module.exports = (robot) ->
       "there could totally be some sour’d cum in this and I would never know.",
       "she spit in my face and pushed me to the ground and walked away. what a country!",
       "trying to re-fuckulate",
-      ""
-
+      "fully torqued",
+      "Do you like dragons?",
+      "dan fashion",
+      "shirt cock!",
+      "Richard Draggen!",
+      "awwooooooooooo!!!!",
+      "god damned man child.",
+      "Ladies and gentlemen, a father of three.",
+      "I am a broken man right now.",
+      "I stole andrew's jacket.",
+      "biting my lip right now."
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -241,7 +251,11 @@ module.exports = (robot) ->
       "unce unce unce unce unce unce",
       "animate me boner deflation",
       "CANT TOUCH DIS NAHANAHNAHANAHANA NAH NAH NAH",
-      "WHAT IS THIS NOISE"
+      "WHAT IS THIS NOISE",
+      "hannimal....",
+      "Hannah Montana!",
+      "there it is again, a god damned palindrome.",
+      "TIT SLAP!"
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -274,7 +288,9 @@ module.exports = (robot) ->
       "Tell family company that I am available for the appropriate sized dump truck full of money",
       "you behave yerself in here",
       "space in yo face!",
-      "Have you ever stared at your balls and watched the move?"
+      "Have you ever stared at your balls and watched the move?",
+      "business hippy",
+      "Steve French!"
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -302,7 +318,13 @@ module.exports = (robot) ->
       "i want to choke you and spit in your mouth",
       "I wonder if someone will make a Preggr app. horny pregnant women looking to get plowed",
       "almost as good as japanese girls puking in each other's mouths",
-      "1000% for darkies"
+      "1000% for darkies",
+      "hipster.",
+      "a god damned PR nightmare",
+      "Kim Khardasian.",
+      "Dont bother me right now, watching vape porn",
+      "... inventing a tinder for cripples",
+      "... inventing a tinder for preggos"
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -316,7 +338,9 @@ module.exports = (robot) ->
       "is it wrong that in my mind I keep thinking of 'Fairy Dong' as 'Ghost penis'?",
       "cock bomb infinity",
       "Consider my pants soiled.",
-      "Wheeeeeeeee!"
+      "Wheeeeeeeee!",
+      "BLAUZER!",
+      "Father blau"
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -328,6 +352,10 @@ module.exports = (robot) ->
       "YOU SHOULD BE WORRIED WE ARE IN A WORLD PERIOD",
       "SNAPCHAT, where your mistakes won’t live forever",
       "I want to be the mother of dragons too",
+      "the dox pirate",
+      "He's a giver.",
+      "riff-raff"
+
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -338,11 +366,27 @@ module.exports = (robot) ->
       "(Nods head wisely)",
       "Hide yo wife hide yo kids!!",
       "Some things you just don't come back from...",
-      "GhOsT mOdE"
+      "Gh0sT m0dE"
     ]
     if Math.random() < 0.2
       msg.send msg.random response
 
+  # Jake quotes
+  robot.hear /(jake|konoske)/i, (msg) ->
+    response = [
+      "fun is over.",
+      "GOD DAMNIT KONOSKE!!",
+      "Snowden agrees.",
+      "Charlie Bucket!",
+      "Jake is IN THE ZONEEEEEE",
+      "AutoZONE!",
+      "He's in the zone.... the auto zonnneeeeaaa!",
+      "KRONOS",
+      "You think your nickname is bad? Body nicknamed me jackoff.",
+      "If you named me like Rodger then I would be Jaksky"
+    ]
+    if Math.random() < 0.2
+      msg.send msg.random response
 
 
   # robot.listen(
