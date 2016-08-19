@@ -259,11 +259,27 @@ bubbles = [
 ]
 
 julian = [
-  "Fuck's sakes."
+  "Fuck's sakes.",
+  "Ah fuck. Cover me my gun's jammed. ",
+  "Bubbles, what happened to my trailer park, man? ",
+  "I want you outta that car in two days though, Ricky. ",
+  "Listen to me Rick, we're about to sell a huge amount of dope here and get rich, ok?",
+  "No, you fuck off! ",
+  "Oh yeah? Does it say anything about you rippin' off insurance companies, pretendin' to be in a wheelchair then gettin' caught drunk, dancin' with ho's makin' porn flicks? Huh? Anythin in ,your book about that, Ray?",
+  "Ray, does the Bible also say something about committing Insurance Fraud by sitting in a wheelchair and then going to jail because you got caught dancing with two hookers totally drunk, while doing a porn movie, does the Bible say anything about that?",
+  "SAM. You're buying dope off of *Sam*? ",
+  "These people are terrible. ",
+  "This is my gun now, so fuck off! ",
 ]
 
 ray = [
   "Fucking way she goes.",
+  "[pause] It's open to interpretation, Julian, it's the Bible. ",
+  "Fucking gulls are biting like crazy Bubs. ",
+  "Nothing's wrong with reading books, but there's only one books that counts Julian, and that's the Bible. It says to help your friends. ",
+  "Oh 'low profile'? What are you, reading books again Julian? ",
+  "Sometimes life is greasy Bubbles. ",
+  "That's the way she goes, boys. Sometimes she goes, sometimes she doesn't cause that's the fucking way she goes. ",
 ]
 
 module.exports = (robot) ->
