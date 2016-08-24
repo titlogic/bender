@@ -31,21 +31,21 @@ module.exports = (robot) ->
   # Maping of keyword triggers to imgur subredits:
   termToGaleries = (term) ->
     galleries = if /\b(ass)\b/.test(term)
-      ["ass", 'asstastic', 'girlsinyogapants', 'assinthong', 'TightShorts', 'twerking', 'twerk', 'assinthong', 'TightShorts', 'panties', 'thong', 'slutsbedrunk', 'springbreakers', 'ChangingRooms', 'facedownassup', 'fitgirls', 'gonewildcurvy', 'latinas', 'lingerie', 'thick', 'upskirt', '']
+      ["ass", 'asstastic', 'girlsinyogapants', 'assinthong', 'TightShorts', 'twerking', 'twerk', 'assinthong', 'TightShorts', 'panties', 'thong', 'slutsbedrunk', 'springbreakers', 'ChangingRooms', 'facedownassup', 'fitgirls', 'gonewildcurvy', 'latinas', 'lingerie', 'thick', 'upskirt', 'nsfwskirts']
     else if /\b(tit|boob)\b/.test(term)
-      ["titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans', 'GoneMild', 'OnOff', 'realgirls', 'rule34', 'hugeboobs', 'ToplessInJeans', 'underboob', 'sideboob', 'babes', 'blondes', 'Boobies', 'breasts', 'brunette', 'burstingout', 'bustybabes', 'bustypetite', 'juicyasians', 'nsfwcosplay', 'palegirls', 'pokies', 'stacked', 'WomenOfColor', 'tittydrop', 'voluptuous', 'snowbunnies']
+      ["titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans', 'GoneMild', 'OnOff', 'realgirls', 'rule34', 'hugeboobs', 'ToplessInJeans', 'underboob', 'sideboob', 'babes', 'blondes', 'Boobies', 'breasts', 'brunette', 'burstingout', 'bustybabes', 'bustypetite', 'juicyasians', 'nsfwcosplay', 'palegirls', 'pokies', 'stacked', 'WomenOfColor', 'tittydrop', 'voluptuous', 'snowbunnies', 'knockers', 'FoxyLadies', 'RealGirls', 'suicidegirls']
     else if /\b(pussy)\b/.test(term)
-      ["collegesluts", 'HairyPussy', 'rearpussy', 'LabiaGW']
+      ["collegesluts", 'HairyPussy', 'rearpussy', 'LabiaGW', 'upskirts']
     else if /\b(redhead)\b/.test(term)
       ["redhead", "redheads", 'ginger']
     else if /\b(weed|bud|grass|dank)\b/.test(term)
       ["marijuana", "weed", "420", "trees"]
     else if /\b(fuck|fucking|xxx|porn)\b/.test(term)
-      ["pornstars", "AmateurArchives", 'AsianCuties', 'asianhotties', 'AsiansGoneWild', 'blowjob', 'blowjobs', 'bonermaterial', 'chubby', 'creampies', 'cumfetish', 'cumsluts', 'damngoodinterracial', 'asshole', 'anal', 'gape', 'girlskissing', 'gwcouples', 'highresnsfw', 'milf', 'nsfwhardcore', 'lesbians']
+      ["pornstars", "AmateurArchives", 'AsianCuties', 'asianhotties', 'AsiansGoneWild', 'blowjob', 'blowjobs', 'bonermaterial', 'chubby', 'creampies', 'cumfetish', 'cumsluts', 'damngoodinterracial', 'asshole', 'anal', 'gape', 'girlskissing', 'gwcouples', 'highresnsfw', 'milf', 'nsfwhardcore', 'lesbians', 'holdthemoan', 'nsfw_gifs', 'GirlsFinishingTheJob', 'LipsThatGrip']
     else if /\b(random)\b/.test(term)
       # This is lazy but I dont care right now.
       #  Maybe its a feature? (custom random list). Ignore that it is a copy and paste from above.
-      ["ass", 'asstastic', 'girlsinyogapants', 'assinthong', 'TightShorts', 'twerking', 'twerk', 'assinthong', 'TightShorts', 'panties', 'thong', 'slutsbedrunk', 'springbreakers', 'ChangingRooms', 'facedownassup', 'fitgirls', 'gonewildcurvy', 'latinas', 'lingerie', 'thick', 'upskirt', "titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans', 'GoneMild', 'OnOff', 'realgirls', 'rule34', 'hugeboobs', 'ToplessInJeans', 'underboob', 'sideboob', 'babes', 'blondes', 'Boobies', 'breasts', 'brunette', 'burstingout', 'bustybabes', 'bustypetite', 'juicyasians', 'nsfwcosplay', 'palegirls', 'pokies', 'stacked', 'WomenOfColor', 'tittydrop', 'voluptuous', "collegesluts", 'HairyPussy', 'rearpussy', "redhead", "redheads", 'ginger', "pornstars", "AmateurArchives", 'AsianCuties', 'asianhotties', 'AsiansGoneWild', 'blowjob', 'blowjobs', 'bonermaterial', 'chubby', 'creampies', 'cumfetish', 'cumsluts', 'damngoodinterracial', 'asshole', 'anal', 'gape', 'girlskissing', 'gwcouples', 'highresnsfw', 'milf', 'nsfwhardcore', 'lesbians', 'snowbunnies', 'LabiaGW']
+      ["ass", 'asstastic', 'girlsinyogapants', 'assinthong', 'TightShorts', 'twerking', 'twerk', 'assinthong', 'TightShorts', 'panties', 'thong', 'slutsbedrunk', 'springbreakers', 'ChangingRooms', 'facedownassup', 'fitgirls', 'gonewildcurvy', 'latinas', 'lingerie', 'thick', 'upskirt', "titties", "naturaltitties", "boobgifs", 'boobbounce', 'ToplessInJeans', 'GoneMild', 'OnOff', 'realgirls', 'rule34', 'hugeboobs', 'ToplessInJeans', 'underboob', 'sideboob', 'babes', 'blondes', 'Boobies', 'breasts', 'brunette', 'burstingout', 'bustybabes', 'bustypetite', 'juicyasians', 'nsfwcosplay', 'palegirls', 'pokies', 'stacked', 'WomenOfColor', 'tittydrop', 'voluptuous', "collegesluts", 'HairyPussy', 'rearpussy', "redhead", "redheads", 'ginger', "pornstars", "AmateurArchives", 'AsianCuties', 'asianhotties', 'AsiansGoneWild', 'blowjob', 'blowjobs', 'bonermaterial', 'chubby', 'creampies', 'cumfetish', 'cumsluts', 'damngoodinterracial', 'asshole', 'anal', 'gape', 'girlskissing', 'gwcouples', 'highresnsfw', 'milf', 'nsfwhardcore', 'lesbians', 'snowbunnies', 'LabiaGW', 'holdthemoan', 'knockers', 'nsfw_gifs', 'nsfw', 'FoxyLadies', 'upskirts', 'nsfwskirts', 'RealGirls', 'GirlsFinishingTheJob', 'LipsThatGrip', 'suicidegirls']
     else
       []
     return galleries
