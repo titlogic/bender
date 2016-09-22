@@ -138,6 +138,22 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
+  # Action Bronson
+  robot.hear /(ancient aliens|aliens|oil|dab|action|bronson|santa|viceland)/i, (msg) ->
+    bronsons = [
+      ":action-bronson:",
+      ":action-bronson-2:",
+      ":action-bronson-3:"
+    ]
+    response = [
+      "Damn son that shit is the greatest.",
+      "I may be the only person to smoke oil on cable tv.",
+      "This is the beginning of a new time man."
+    ]
+    if Math.random() < 0.2
+      msg.send "> " + msg.random(bronsons) + "  " + msg.random(response)
+
+
   # Lazy Bubb Rubb whistles
   robot.hear /(whistles|whistlers|wh*?i+oo+h|woo+ woo+|woo+)/i, (msg) ->
     response = [
