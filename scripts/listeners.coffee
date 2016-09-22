@@ -146,9 +146,16 @@ module.exports = (robot) ->
       ":action-bronson-3:"
     ]
     response = [
-      "Damn son that shit is the greatest.",
+      "Dinosaurs. One of the most majestic creatures to ever roam the face of this planet.",
       "I may be the only person to smoke oil on cable tv.",
-      "This is the beginning of a new time man."
+      "This is the beginning of a new time man.",
+      "We got big body beluga in tha house.",
+      "The Stars. They say that is where life started. In that area.",
+      "Ohhhh that's stupid. So dumb.",
+      "I'm very acrobatic I could do a round-house.",
+      "I could do a round-house.",
+      "This type of shit doesn't just fuckin blow your mind man? My mind is blown.",
+      "I'm rap's vigilante. I'm out for justice."
     ]
     if Math.random() < 0.2
       msg.send "> " + msg.random(bronsons) + "  " + msg.random(response)
@@ -171,7 +178,6 @@ module.exports = (robot) ->
       "http://www.black-ogre.com/blackogreonline/wp-content/uploads/2012/02/Whistle-Tips-They-Were-Being-Installed.jpg",
       "http://www.angelfire.com/planet/whistletip/images/bubrubb4.jpg",
       "WIOOOH!!!!",
-
       "tits."
     ]
     if Math.random() < 0.2
@@ -202,6 +208,7 @@ module.exports = (robot) ->
   # Shannon quotes
   robot.hear /(shannon|shenanigan|shannonymous|mcpherson)/i, (msg) ->
     response = [
+      "Have you ever stared at your balls and watched them move?",
       "Ya'll like dragons?",
       "Fully got a noner right now.",
       "*thrust* *thrust* *thrust*",
@@ -304,7 +311,6 @@ module.exports = (robot) ->
       "Tell family company that I am available for the appropriate sized dump truck full of money",
       "you behave yerself in here",
       "space in yo face!",
-      "Have you ever stared at your balls and watched the move?",
       "business hippy",
       "Steve French!"
     ]
