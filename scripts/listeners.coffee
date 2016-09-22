@@ -410,6 +410,25 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
+  # That is awesome
+  robot.hear /(shucky|ducky|herman|cain|great|awesome)/i, (msg) ->
+    response = [
+      ":shucky-ducky-now: AWWWWW Shucky Ducky Now Ya'll!! :shucky-ducky-now:"
+    ]
+    if Math.random() < 0.2
+      msg.send msg.random response
+
+  # Ya Big Dummy
+  robot.hear /(dumb|stupid|idiot)/i, (msg) ->
+    response = [
+      "You. Stupid. DUMMY!",
+      "Ya idiot!",
+      "YA IDGIT!!",
+      "Booooy you so dumb.",
+      "You little idiot!!"
+    ]
+    if Math.random() < 0.2
+      msg.send msg.random response
 
   # robot.listen(
   #   (message) ->
