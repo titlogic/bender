@@ -85,7 +85,7 @@ module.exports = (robot) ->
       "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTH8oK0coP4jsCiGnl55lMsY86jdKCjMWeQtG_RLgzV0EebEani",
       "http://25.media.tumblr.com/94c8a9897d44b5da84aa351ffbb8f471/tumblr_n0gd827F0L1qa68j2o1_r1_500.gif",
       "https://coubsecure-a.akamaihd.net/get/b158/p/coub/simple/cw_gif_big/b604acba4cc/3fc58e161ab60567c4777/1447442360_4z2ar0_8yi3no5c.gif",
-      "http://i.kinja-img.com/gawker-media/image/upload/s--Xo3q-3w8--/18x4trzgxw960gif.gif",
+      "http://i.kinja-img.com/gawker-media/image/upload/s--Xo3q-3w8--/18x4trzgxw960gif.gif"
     ]
     msg.send msg.random response
 
@@ -103,7 +103,6 @@ module.exports = (robot) ->
       ":tits:",
       ":ass:",
       ":eggplant: :fist: :sweat_drops: :open_mouth:"
-
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -139,7 +138,7 @@ module.exports = (robot) ->
       msg.send msg.random response
 
   # Action Bronson
-  robot.hear /(ancient aliens|aliens|oil|dab|action|bronson|santa|viceland)/i, (msg) ->
+  robot.hear /(OG|bam bam|smoke|ancient aliens|aliens|oil|dab|action|bronson|santa|viceland|weed|dinosaurs|history)/i, (msg) ->
     bronsons = [
       ":action-bronson:",
       ":action-bronson-2:",
@@ -155,7 +154,14 @@ module.exports = (robot) ->
       "I'm very acrobatic I could do a round-house.",
       "I could do a round-house.",
       "This type of shit doesn't just fuckin blow your mind man? My mind is blown.",
-      "I'm rap's vigilante. I'm out for justice."
+      "I'm rap's vigilante. I'm out for justice.",
+      "http://www.allthingsgomusic.com/wp-content/uploads/2016/04/action-bronson-gq-1.jpg",
+      "http://www.billboard.com/files/styles/article_main_image/public/media/action-bronson-2015-jeremy-liebman-billboard-650.jpg",
+      "https://zumic.com/wp-content/uploads/2013/10/action-bronson-xxl-freshman-profile-2013.jpg",
+      "I used to run a food ring in fat camp.",
+      "It's called Hardcore OG and it gets me really nice.",
+      "You don't fuck with America like that right?",
+      "Whoo, whooo, KaKaaa! SKoooWEE!"
     ]
     if Math.random() < 0.2
       msg.send "> " + msg.random(bronsons) + "  " + msg.random(response)
@@ -206,7 +212,7 @@ module.exports = (robot) ->
       msg.send msg.random response
 
   # Shannon quotes
-  robot.hear /(shannon|shenanigan|shannonymous|mcpherson)/i, (msg) ->
+  robot.hear /(shannon|shenanigan|shannonymous|mcpherson|shan)/i, (msg) ->
     response = [
       "Have you ever stared at your balls and watched them move?",
       "Ya'll like dragons?",
@@ -240,7 +246,8 @@ module.exports = (robot) ->
       "Ladies and gentlemen, a father of three.",
       "I am a broken man right now.",
       "I stole andrew's jacket.",
-      "biting my lip right now."
+      "biting my lip right now.",
+      "I have a fridge full of dry kraut cause I drank all the juice."
     ]
     if Math.random() < 0.2
       msg.send msg.random response
@@ -286,14 +293,14 @@ module.exports = (robot) ->
   # Dan quotes
   robot.hear /(dan|toillion)/i, (msg) ->
     response = [
-      "Night court.",
+      "Motherfucking Night Court.",
       "Pewwwwwwdipie!!!!!",
       "hustle trees",
       "not now, he is broken.",
       "SHUT THE FUCK UP DAN.",
-      "you killed my fava.",
-      "she's got fava issues",
-      "dont threaten me with a good time!",
+      "You killed my fava, prepare to die.",
+      "She's got fava issues",
+      "Don't threaten me with a good time!",
       "together we form..... DANNIMAL!!!!",
       "I've been high since I was 17.",
       "Am i right????!?!?",
@@ -303,16 +310,13 @@ module.exports = (robot) ->
       "Your best case scenario you come out unscathed.",
       "We aint flippin burgers in here",
       "What are you, hourly?",
-      "have a crazy-off",
-      "what a country",
-      "hey whatever floats yer boat",
-      "my dog is hunting a fly around my bedroom",
-      "¯\_(ツ)_/¯",
-      "Tell family company that I am available for the appropriate sized dump truck full of money",
-      "you behave yerself in here",
-      "space in yo face!",
-      "business hippy",
-      "Steve French!"
+      "Phrasing!!",
+      "Have a crazy-off",
+      "What a country",
+      "Hey whatever floats yer boat",
+      "Tinnitus YANA!",
+      "Hey remember when Lubby broke that table?",
+      "I'm jeetin hard right now."
     ]
     if Math.random() < 0.2
       msg.send msg.random response
