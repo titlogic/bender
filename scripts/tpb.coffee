@@ -256,6 +256,7 @@ bubbles = [
   "Hey boys, how's she goin'?",
   "The government. Harrrrd cock to suck.",
   "This could be a fuckin' life changer. This could be a mansion!",
+  "Does the tinman have a sheet-metal cock?",
 ]
 
 julian = [
