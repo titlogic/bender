@@ -391,7 +391,7 @@ module.exports = (robot) ->
   robot.hear /(j-roc|jroc|j roc)/i, (msg) ->
     msg.send "> :jroc:  " + msg.random jroc
 
-  robot.hear /(lahey||jim|John Dunsworth)/i, (msg) ->
+  robot.hear /(lahey|jim|John Dunsworth)/i, (msg) ->
     msg.send "> :lahey:  " + msg.random lahey
 
   robot.hear /(julian|John Paul|John Paul Tremblay)/i, (msg) ->
