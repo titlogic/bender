@@ -401,4 +401,4 @@ module.exports = (robot) ->
     msg.send "> :ray:  " + msg.random ray
 
   robot.hear /(randy|Bobandus|Bobandy|Bandyran|Randinator|Barrie Dunn)/i, (msg) ->
-    msg.send "> :ray:  " + msg.random ray
+    msg.send "> :randy:  " + msg.random ray
