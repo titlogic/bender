@@ -180,6 +180,75 @@ ricky = [
   "Ahhhh hhhhuuuaahhhhhhhhh!",
   "Don't fuckin' shush me.",
   "It fuckin' sucks.",
+  "That is one awkwardly situation",
+  "Beauty is in the eye when you hold her",
+  "Makes me want to have breakfast at bed",
+  "Looks like we burn the hatchet at both ends",
+  "Look in your brain department",
+  "Can you give me a bit of credjudice?",
+  "The Carbonator was bad",
+  "This is a Catch 23 situation",
+  "God damned church of later day saints",
+  "Looks like a tropical earthquake blew through here",
+  "No, its crystally-clear now.",
+  "Not sure what a Cubic Zarcarbian is and not sure I want to know.",
+  "Nice Decnals!",
+  "I am going to figure this out through denial and error",
+  "Does a bear shit on the pope?",
+  "Don't judge a cover of a book by its look",
+  "Do onto others as you do onto you",
+  "I made it past elemental school",
+  "Every kid goes through phrases",
+  "I thouht that was fire retarded!",
+  "Five-minute rule.",
+  "I did it for the gooder of us all",
+  "forward-fast",
+  "We are friends with the benedicts",
+  "what is she gonna get bornt?",
+  "We can get two birds stoned at once!",
+  "good things come to those at the gate.",
+  "gorilla see, gorilla do",
+  "honesty is just a test policy",
+  "We made a deal using the honorly system",
+  "I do trust his judgmental.",
+  "I dont have enough people words to make it understand you the way it understands me.",
+  "I'm an optometrist.",
+  "I'm not going to put my dad in jeopardization",
+  "Who are you, fucking indianapolis jones?",
+  "It's clear to see who makes the pants here",
+  "i-surance",
+  "It doesn't take rocket appliances to figure this one out. ",
+  "I toad a so. I fuckin' toad a so.",
+  "Let guy bonds be guy bonds.",
+  "Make like a tree and fuck off.",
+  "Make my words damnit. ",
+  "Its a god damned Mexicali stand-on!",
+  "My minds started racing against each other.",
+  "No things attached. ",
+  "North of-americas...",
+  "You are on slim ice buddy.",
+  "One man's garbage is another man person's good ungarbage, okay?",
+  "Well, you passed with flying fuckin' carpets",
+  "^ thats pavin' a fuckin' point right there.",
+  "What happens is that people's freedom of choices & voices act.",
+  "What do you have, a PF. D? ",
+  "Play that 'diane sawyer' song....",
+  "Do they have a search warranty?",
+  "You are selling me under the bus right now.",
+  "You probably listen to Sippy and Garfuckel.",
+  "Lets split it 50/50/50.",
+  "Its a matter of survival of the fitness right now.",
+  "Sweet empowered chicken things",
+  "Take it and leave it.",
+  "Are you trying to make my heart attack?",
+  "Its water under the fridge now.",
+  "What comes around is all around... ",
+  "Where there's smoke there's wires...",
+  "What julian doesn't grow won't burn him...",
+  "What lucy doesn't know won't learn her...",
+  "What the fuck does that suppose to mean?",
+  "Worst case ontario...",
+  "On a scale from one or ten?",
 ]
 
 lahey = [
@@ -222,6 +291,7 @@ lahey = [
   "Yeah, well I invited myself. ",
   "But when he shits... he still shits in the park.",
   "Livin' the fuckin dream afghanarandy.",
+  "Randy... I am the liquor."
 ]
 
 bubbles = [
@@ -301,10 +371,18 @@ randy = [
   "I once saw him stuff 15 cheeseburgers into that gut in one sitting",
   "Pregnant with a bucket of chicken",
   "Onion ring Sasquatch",
+  "Frig off!!",
+  "Aw the shirt thing again look i dont wear shirts its always been like that",
+  "Friggin grease!",
+  "They stole my fuckin cheeseburgers!",
+  "Mr Lahey, not another night of the shit abyss, please!",
+  "Ahhh, Mr Lehey I got soap in my eyes!",
+  "I need a cheeseburger!",
+
 ]
 
 module.exports = (robot) ->
-  robot.hear /(bubbles|bubbs|Mike Smith/i, (msg) ->
+  robot.hear /(bubbles|bubbs|Mike Smith)/i, (msg) ->
     msg.send "> :bubbles:  " + msg.random bubbles
 
   robot.hear /(ricky|rickey|Robb Wells)/i, (msg) ->
@@ -313,7 +391,7 @@ module.exports = (robot) ->
   robot.hear /(j-roc|jroc|j roc)/i, (msg) ->
     msg.send "> :jroc:  " + msg.random jroc
 
-  robot.hear /(lahey|John Dunsworth/i, (msg) ->
+  robot.hear /(lahey||jim|John Dunsworth)/i, (msg) ->
     msg.send "> :lahey:  " + msg.random lahey
 
   robot.hear /(julian|John Paul|John Paul Tremblay)/i, (msg) ->
