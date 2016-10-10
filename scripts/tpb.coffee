@@ -283,6 +283,26 @@ ray = [
   "That's the way she goes, boys. Sometimes she goes, sometimes she doesn't cause that's the fucking way she goes. ",
 ]
 
+randy = [
+  "Gut Cassidy and the Sundance Cheeseburger.",
+  "Randy is a 15 Cheeseburger eatin' Rico Suave looking mafucka!",
+  "Starsky and gut!",
+  "I called him a cheeseburger walrus. I called him an onion ring Sasquatch.",
+  "Randy is a basketball eatin' walrus ass mother fucka!",
+  "Randy is a fucking cheeseburger locker!",
+  "Cheeseburger Depot!",
+  "Randy is a god damned inflatable Elvis!",
+  "God damned Gut Cassidy and the Sundance Cheeseburger",
+  "The Cheeseburger smuggler",
+  "The Cheeseburger Walrus",
+  "Marty McLargeFries",
+  "Mr. Onion rings large fries extra gravy",
+  "Lord of the Onion Rings",
+  "I once saw him stuff 15 cheeseburgers into that gut in one sitting",
+  "Pregnant with a bucket of chicken",
+  "Onion ring Sasquatch",
+]
+
 module.exports = (robot) ->
   robot.hear /(bubbles|bubbs|Mike Smith/i, (msg) ->
     msg.send "> :bubbles:  " + msg.random bubbles
@@ -300,4 +320,7 @@ module.exports = (robot) ->
     msg.send "> :julian:  " + msg.random julian
 
   robot.hear /(ray|Barrie Dunn)/i, (msg) ->
+    msg.send "> :ray:  " + msg.random ray
+
+  robot.hear /(randy|Bobandus|Bobandy|Bandyran|Randinator|Barrie Dunn)/i, (msg) ->
     msg.send "> :ray:  " + msg.random ray
