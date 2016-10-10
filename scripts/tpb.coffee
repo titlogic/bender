@@ -291,7 +291,10 @@ lahey = [
   "Yeah, well I invited myself. ",
   "But when he shits... he still shits in the park.",
   "Livin' the fuckin dream afghanarandy.",
-  "Randy... I am the liquor."
+  "Randy... I am the liquor.",
+  "I am the liquor!",
+  "I've been sober for 14 hours now, barb.",
+  "(thrust) (thrust) (thrust) .... dont you get it?! The fishing rod is my cock!"
 ]
 
 bubbles = [
@@ -327,6 +330,9 @@ bubbles = [
   "The government. Harrrrd cock to suck.",
   "This could be a fuckin' life changer. This could be a mansion!",
   "Does the tinman have a sheet-metal cock?",
+  "He does throw a lot of piss jugs around and nobody enjoys those...",
+  "When he's in his underwear, you know he can ge like a football player and he is hard to knock over then. That big coagulated gravy hotdog bun bastard.",
+  "Look at this fuck'in drunk whore show!",
 ]
 
 julian = [
@@ -351,6 +357,8 @@ ray = [
   "Oh 'low profile'? What are you, reading books again Julian? ",
   "Sometimes life is greasy Bubbles. ",
   "That's the way she goes, boys. Sometimes she goes, sometimes she doesn't cause that's the fucking way she goes. ",
+  "Listen Ricky, dont tell anyone I am living at the dump, OK?",
+
 ]
 
 randy = [
@@ -372,6 +380,7 @@ randy = [
   "Pregnant with a bucket of chicken",
   "Onion ring Sasquatch",
   "Frig off!!",
+  "Frig off Ricky!",
   "Aw the shirt thing again look i dont wear shirts its always been like that",
   "Friggin grease!",
   "They stole my fuckin cheeseburgers!",
