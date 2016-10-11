@@ -8,7 +8,6 @@ module.exports = (robot) ->
   robot.hear "what is my name?", (msg) ->
     msg.send msg.message.user.name + ", #" + msg.message.user.id
 
-
   # robot.listen(
   #   (message) ->
   #     # condition
