@@ -52,7 +52,7 @@ ricky = [
   "Worst case Ontario... ",
   "It's basically Peach'n'Cake ",
   "Denial and Error... ",
-  "Make my words (Mark)*",
+  "Make my word.",
   "Hey Bubs, are you watching that documentary on Saskatchewans?(Sasquatches)*",
   "I'm trying to try here, Sarah.",
   "Who's playing the pianio? ",
@@ -249,6 +249,8 @@ ricky = [
   "What the fuck does that suppose to mean?",
   "Worst case ontario...",
   "On a scale from one or ten?",
+  "A lot of people say you cant smoke dope and get drunk when you have kids and thats not true. You can, but you still need to get up in the morning. Thats being responsibles and being a man. And sure, I'm fuckin' hung over and burnt out but, that's what being a good dad's all about. ",
+  "Is there any way that Lucy could have got pregnant... without my bird doing stuff to her?"
 ]
 
 lahey = [
@@ -347,6 +349,7 @@ julian = [
   "SAM. You're buying dope off of *Sam*? ",
   "These people are terrible. ",
   "This is my gun now, so fuck off! ",
+  "Ricky, we gotta lower prices to $10 a gram.",
 ]
 
 ray = [
@@ -358,7 +361,7 @@ ray = [
   "Sometimes life is greasy Bubbles. ",
   "That's the way she goes, boys. Sometimes she goes, sometimes she doesn't cause that's the fucking way she goes. ",
   "Listen Ricky, dont tell anyone I am living at the dump, OK?",
-
+  "Bubbles, answer that I gotta rock a piss off\n:bubbles:  ...",
 ]
 
 randy = [
@@ -387,17 +390,19 @@ randy = [
   "Mr Lahey, not another night of the shit abyss, please!",
   "Ahhh, Mr Lehey I got soap in my eyes!",
   "I need a cheeseburger!",
-
+  "Moose balls!",
+  "My pants! FUCK.",
 ]
 
 module.exports = (robot) ->
+  # 100% of the time, u mention it and it shall be served.
   robot.hear /(bubbles|bubbs|Mike Smith)/i, (msg) ->
     msg.send "> :bubbles:  " + msg.random bubbles
 
-  robot.hear /(ricky|rickey|Robb Wells)/i, (msg) ->
+  robot.hear /(ricky|rickey|Robb Wells|fucky|catch 23|jalapeno)/i, (msg) ->
     msg.send "> :ricky:  " + msg.random ricky
 
-  robot.hear /(j-roc|jroc|j roc)/i, (msg) ->
+  robot.hear /(j-roc|jroc|j roc|mafk)/i, (msg) ->
     msg.send "> :jroc:  " + msg.random jroc
 
   robot.hear /(lahey|jim|John Dunsworth)/i, (msg) ->
@@ -410,4 +415,34 @@ module.exports = (robot) ->
     msg.send "> :ray:  " + msg.random ray
 
   robot.hear /(randy|Bobandus|Bobandy|Bandyran|Randinator|Barrie Dunn)/i, (msg) ->
-    msg.send "> :randy:  " + msg.random ray
+    msg.send "> :randy:  " + msg.random randy
+
+
+  # Luck triggers
+  robot.hear /(decent|cock|shitty|bird|glasses|julian|ricky|kitty|cat|bastard|whore|grunt)/i, (msg) ->
+    if Math.random() < 0.2
+      msg.send "> :bubbles:  " + msg.random bubbles
+
+  robot.hear /(lucy|ricky|julian|randy|bubbles|chips|Sasquatch|atodaso|weed|ganja|420|marijuana|chicken|hash|stoned|baked|pipe|bong|fuck)/i, (msg) ->
+    if Math.random() < 0.2
+      msg.send "> :ricky:  " + msg.random ricky
+
+  robot.hear /(white)/i, (msg) ->
+    if Math.random() < 0.2
+      msg.send "> :jroc:  " + msg.random jroc
+
+  robot.hear /(julian|shit|booze|liquor|drunk)/i, (msg) ->
+    if Math.random() < 0.2
+      msg.send "> :lahey:  " + msg.random lahey
+
+  robot.hear /(ricky|rum|coke)/i, (msg) ->
+    if Math.random() < 0.2
+      msg.send "> :julian:  " + msg.random julian
+
+  robot.hear /(ricky|trucker|dad)/i, (msg) ->
+    if Math.random() < 0.2
+      msg.send "> :ray:  " + msg.random ray
+
+  robot.hear /(lahey|cheeseburger|gut|fat|cock|grease)/i, (msg) ->
+    if Math.random() < 0.2
+      msg.send "> :randy:  " + msg.random randy
