@@ -228,7 +228,8 @@ module.exports = (robot) ->
       "I am a broken man right now.",
       "I stole andrew's jacket.",
       "biting my lip right now.",
-      "I have a fridge full of dry kraut cause I drank all the juice."
+      "I have a fridge full of dry kraut cause I drank all the juice.",
+      "Gonna go grab a beer - time to get my rat gun loaded, with my eye protection on - one in 20 times its fucking on like donkey kong."
     ]
     if Math.random() < 0.2
       msg.send msg.random response
