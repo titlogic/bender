@@ -44,6 +44,9 @@ jroc = [
   "I'm gonna axe 'em for ya right quick.",
 ]
 
+
+
+
 ricky = [
   "Lucy is banging cops which is no big deal, I guess. I don't run Lucy. She's for to be her own woman ",
   "Lucy might have a problem, but what Lucy doesn't know won't learn her. ",
@@ -250,8 +253,12 @@ ricky = [
   "Worst case ontario...",
   "On a scale from one or ten?",
   "A lot of people say you cant smoke dope and get drunk when you have kids and thats not true. You can, but you still need to get up in the morning. Thats being responsibles and being a man. And sure, I'm fuckin' hung over and burnt out but, that's what being a good dad's all about. ",
-  "Is there any way that Lucy could have got pregnant... without my bird doing stuff to her?"
+  "Is there any way that Lucy could have got pregnant... without my bird doing stuff to her?",
+  "You sure It's not just a shit cramp?",
 ]
+
+
+
 
 lahey = [
   "When you plant shit-seeds, you get shit-weeds.",
@@ -299,6 +306,9 @@ lahey = [
   "(thrust) (thrust) (thrust) .... dont you get it?! The fishing rod is my cock!"
 ]
 
+
+
+
 bubbles = [
   "I'd like to see that Red Blue Green cocksucker put one of those together fucking duct taping it.",
   "Dino. Did you call Fred and Barney too? How about Mr. Slate?",
@@ -335,7 +345,14 @@ bubbles = [
   "He does throw a lot of piss jugs around and nobody enjoys those...",
   "When he's in his underwear, you know he can ge like a football player and he is hard to knock over then. That big coagulated gravy hotdog bun bastard.",
   "Look at this fuck'in drunk whore show!",
+  "I kinda feel like Freddy Murcury right now",
+  "You brought us here. ",
+  "Lets just go lay on a park bench.",
+  "Jesus murphy.",
 ]
+
+
+
 
 julian = [
   "Fuck's sakes.",
@@ -350,7 +367,12 @@ julian = [
   "These people are terrible. ",
   "This is my gun now, so fuck off! ",
   "Ricky, we gotta lower prices to $10 a gram.",
+  "We're trapped in fucking hell here, boys.",
+  "I'll try. I dont know if I can fucking do this guys, but I'm gonna try. For you guys.",
 ]
+
+
+
 
 ray = [
   "Fucking way she goes.",
@@ -363,6 +385,9 @@ ray = [
   "Listen Ricky, dont tell anyone I am living at the dump, OK?",
   "Bubbles, answer that I gotta rock a piss off\n:bubbles:  ...",
 ]
+
+
+
 
 randy = [
   "Gut Cassidy and the Sundance Cheeseburger.",
@@ -394,6 +419,9 @@ randy = [
   "My pants! FUCK.",
 ]
 
+
+
+
 module.exports = (robot) ->
   # 100% of the time, u mention it and it shall be served.
   robot.hear /(bubbles|bubbs|Mike Smith)/i, (msg) ->
@@ -420,29 +448,29 @@ module.exports = (robot) ->
 
   # Luck triggers
   robot.hear /(decent|cock|shitty|bird|glasses|julian|ricky|kitty|cat|bastard|whore|grunt)/i, (msg) ->
-    if Math.random() < 0.2
+    if Math.random() < 0.1
       msg.send "> :bubbles:  " + msg.random bubbles
 
   robot.hear /(lucy|ricky|julian|randy|bubbles|chips|Sasquatch|atodaso|weed|ganja|420|marijuana|chicken|hash|stoned|baked|pipe|bong|fuck)/i, (msg) ->
-    if Math.random() < 0.2
+    if Math.random() < 0.1
       msg.send "> :ricky:  " + msg.random ricky
 
   robot.hear /(white)/i, (msg) ->
-    if Math.random() < 0.2
+    if Math.random() < 0.1
       msg.send "> :jroc:  " + msg.random jroc
 
   robot.hear /(julian|shit|booze|liquor|drunk)/i, (msg) ->
-    if Math.random() < 0.2
+    if Math.random() < 0.1
       msg.send "> :lahey:  " + msg.random lahey
 
   robot.hear /(ricky|rum|coke)/i, (msg) ->
-    if Math.random() < 0.2
+    if Math.random() < 0.1
       msg.send "> :julian:  " + msg.random julian
 
   robot.hear /(ricky|trucker|dad)/i, (msg) ->
-    if Math.random() < 0.2
+    if Math.random() < 0.1
       msg.send "> :ray:  " + msg.random ray
 
   robot.hear /(lahey|cheeseburger|gut|fat|cock|grease)/i, (msg) ->
-    if Math.random() < 0.2
+    if Math.random() < 0.1
       msg.send "> :randy:  " + msg.random randy

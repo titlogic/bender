@@ -142,7 +142,18 @@ module.exports = (robot) ->
       "I used to run a food ring in fat camp.",
       "It's called Hardcore OG and it gets me really nice.",
       "You don't fuck with America like that right?",
-      "Whoo, whooo, KaKaaa! SKoooWEE!"
+      "Whoo, whooo, KaKaaa! SKoooWEE!",
+      "I've been high since I was this big :baby:. I've been high since I was this big :baby:  ... yeah. Stupid. ",
+      "Fuck, thats delicious",
+      "I think I need a ricola.",
+      "Opportunity be knocking, you gotta let a motha-fucka in.",
+      "Why you think I'm out here actin' crazy?",
+      "I feel so alive... I think I just stit myself.",
+      "You aint gotta worry about a 'ting, I got it covered...",
+      "I heard your bitch still wears 'echo'.",
+      "You need to speek clearer dear, because I can't hear ya.",
+      "Why u gotta act like a bitch... when I'm with youuuuu",
+
     ]
     if Math.random() < 0.2
       msg.send "> " + msg.random(bronsons) + "  " + msg.random(response)
