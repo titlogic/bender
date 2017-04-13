@@ -88,6 +88,22 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
+  # Dave Chapelle
+  robot.hear /(dave|chapelle|chappelle|nigga|nigger|black|negro|tyrone|crack|doo doo|chocolate|chronic|stressed|rick james)/i, (msg) ->
+    response = [
+      "I'm rich, bitch!",
+      "Fuck yo couch, nigga!",
+      "I'm Rick James, Bitch!",
+      "Its doo doo, baby!",
+      "Peanut Butter and Crack sandwich. ",
+      "Did someone say crack?",
+      "Shazam!",
+      "Whitney Died!!?! Bitch had my crack pipe.",
+    ]
+    if Math.random() < 0.2
+      msg.send "> :dave:  " + msg.random response
+
+
   # Lazy McConaughey
   robot.hear /(alright)/i, (msg) ->
     response = [
