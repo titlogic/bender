@@ -99,8 +99,31 @@ module.exports = (robot) ->
       "Did someone say crack?",
       "Shazam!",
       "Whitney Died!!?! Bitch had my crack pipe.",
+      "Now, Darkness, the tables are turned.",
+      "Drugs is all around you kids. Look at that magic marker cap. What the hell you think that is, some kind of crayon? Take it off and sniff it and get high.",
+      "Remember what the Bible says: He who is without sin, cast the first rock. And I shall smoketh it.",
+      "Night. Night. Keep yo butthole tight.",
+      "...and that, kids, was the first time I sucked a dick for crack.",
+      "Come on, what am I gonna do? Just all of a sudden jump up and grind my feet on somebody's couch like it's something to do? Come on. I got a little more sense then that........ Yeah, I remember grinding my feet on Eddie's couch.",
+      "Bitches! Come over here and show Charlie Murphy yo titties!",
+      "I'm Dave Chappelle, and I like internet porn.",
+      "...  he would step across the line. Habitually. He's a habitual line stepper.",
+      "You tha' goddamn devil.",
+      "Because of my complexion, he use to call me Darkness. ",
+      "Be careful if you ever get a sleeper hold. The next day your anus will really hurt.",
+      "I'm standing there I'm thinking, 'This nigga really has lost his fucking mind.'",
+      "DARKNESS, EVERYONE, DARKNESS!",
+      "That's one hundred percent Cambodian, dawg.",
+      "I hate you. I hate you. I don't even know you, and I hate your guts. I hope all the bad things in life happen to you and nobody else but you.",
+      "Hey hey hey hey. Smoke weed every day.",
+      "Sir! I'm going to make this clear. I'm in no way, shape or form involved in any kind of niggerdom.",
+      "Africa.",
+      "[hands full of money] Crack, here I come!",
+      "Cocaine's a hell of a drug."
+      "You know you must be doing something right if old people like you.",
+      "I'm Dave Chappelle and I'm a chronic masturbator.",
     ]
-    if Math.random() < 0.2
+    if Math.random() < 0.3
       msg.send "> :dave:  " + msg.random response
 
 
@@ -169,7 +192,6 @@ module.exports = (robot) ->
       "I heard your bitch still wears 'echo'.",
       "You need to speek clearer dear, because I can't hear ya.",
       "Why u gotta act like a bitch... when I'm with youuuuu",
-
     ]
     if Math.random() < 0.2
       msg.send "> " + msg.random(bronsons) + "  " + msg.random(response)
