@@ -322,7 +322,7 @@ module.exports = (robot) ->
       msg.send msg.random response
 
   # Dan quotes
-  robot.hear /(dan|toillion)/i, (msg) ->
+  robot.hear /(dan|toillion|amsterdam|weed|vacation)/i, (msg) ->
     response = [
       "Motherfucking Night Court.",
       "Pewwwwwwdipie!!!!!",
