@@ -483,6 +483,10 @@ module.exports = (robot) ->
       "Yeah, well, scientifically, traditions are an idiot thing.",
       "Get your shit together! Get it all together, and put it in your backpack. take it to the store and sell it or put it in the shit museum. I dont care what u do just gotta get it together! ",
       "I'm gonna need you to take your opinion and shove it waayyyyyyyy up inside your butthole. ",
+      "There is no god summer, gotta rip that bandaid off right now.",
+      "gee morty if you twist the words around enough you can make anything sound bad",
+      "That’s just slavery with extra steps",
+      "I call it, a floogle crank",
     ]
     if Math.random() < 0.2
       msg.send "> :rick:  " + msg.random response
