@@ -465,6 +465,30 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
+  # Rick & Morty
+  robot.hear /(rick|morty|existence|science|future)/i, (msg) ->
+    response = [
+      "All right, all right, cool it! ",
+      "... you have to understand that as far as Grandpa's concerned, you're both pieces of shit! Yeah. I can prove it. mathematically",
+      "What about the reality where Hitler cured cancer, Morty?",
+      "Weddings are basically funerals with cake.",
+      "Glip Glop? It's like the N word and the C word had a baby and it was raised by all the bad words for Jews... WHAT UP MY GLIP GLOPS!!!",
+      "You're young, you have your whole life ahead of you, and your anal cavity is still taut yet malleable. ",
+      "That's planning for failure.... even dumber than regular planning. ",
+      "Nobody exists on purpose. Nobody belongs anywhere. Everybody’s gonna die. Come watch TV?",
+      "Sometimes science is a lot more art than science. A lot of people don't get that.",
+      "Wubba lubba dub dub!",
+      "I'm gonna need em waaaaaaaay up inside your butthole. ",
+      "Lick lick lick my balls! Ahahahah Yaeh. ",
+      "Yeah, well, scientifically, traditions are an idiot thing.",
+      "Get your shit together! Get it all together, and put it in your backpack. take it to the store and sell it or put it in the shit museum. I dont care what u do just gotta get it together! ",
+      "I'm gonna need you to take your opinion and shove it waayyyyyyyy up inside your butthole. ",
+    ]
+    if Math.random() < 0.2
+      msg.send "> :rick:  " + msg.random response
+
+
+
   # robot.listen(
   #   (message) ->
   #     # match = message.match(/^[A-Z,!@#$%^&*()_+-=\?\/\s]+$/)
