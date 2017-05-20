@@ -466,7 +466,7 @@ module.exports = (robot) ->
       msg.send msg.random response
 
   # Rick & Morty
-  robot.hear /(rick|morty|existence|science|future)/i, (msg) ->
+  robot.hear /(rick|morty|existence|science|scientist|future|burp|alcohol|travel|jew|burp)/i, (msg) ->
     response = [
       "All right, all right, cool it! ",
       "... you have to understand that as far as Grandpa's concerned, you're both pieces of shit! Yeah. I can prove it. mathematically",
@@ -487,7 +487,25 @@ module.exports = (robot) ->
       "gee morty if you twist the words around enough you can make anything sound bad",
       "That’s just slavery with extra steps",
       "I call it, a floogle crank",
+      "I made a bomb. I'm gonna drop the bomb. We'll get a nice fresh start.",
+      "This was a wonderful breakfast Beth. You really made the crap out of those eggs. I wish your mother was here to eat them.",
+      "*burrrp*",
+      "I ... *burrrp* ",
+      "*burrrp* ... *buuurrp*",
+      "You have to do it for grandpa Morty. You gotta put these seeds up your butt. Come on Morty.",
+      "Did u get those seeds up your butt?",
+      "Its gonna be great Marty *buuurp* all kinds of Science.",
+      "The flarp zone is for flaping and unflarping only. ",
+      "Good thinking! The student becomes the teacher.",
+      "I gotta get you outta here, u gotta get those seeds outta your ass.",
+
+      # Jerry
+      "Since we are fighting, if you ever have an affair with that guy I will come to the hotel   room and blow my brains out all over your naked bodies.",
+
+      # Morty
+      "You are a monster! You are like Hitler, only Hitler cared about Germany or something.",
     ]
+
     if Math.random() < 0.2
       msg.send "> :rick:  " + msg.random response
 
