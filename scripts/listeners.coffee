@@ -204,7 +204,6 @@ module.exports = (robot) ->
       "https://soundcloud.com/vibesquad/the-whistles",
       "http://i.imgur.com/KeepBS0.jpg",
       "http://24.media.tumblr.com/tumblr_lx31kykJQX1r2tufko1_400.jpg",
-      "https://images.rapgenius.com/f0a9c81851ac310f1e8a745173b17126.500x373x17.gif",
       "http://www.f150online.com/galleries/images/1910-3152-50803.jpg",
       "http://i3.ytimg.com/vi/jpl_ey5cVnk/hqdefault.jpg",
       "http://sd.keepcalm-o-matic.co.uk/i/the-whistles-go-woo-woo.png",
