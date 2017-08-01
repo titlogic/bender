@@ -47,14 +47,31 @@ rick_sanchez = [
   "The flarp zone is for flaping and unflarping only. ",
   "Good thinking! The student becomes the teacher.",
   "I gotta get you outta here, u gotta get those seeds outta your ass.",
+  "I'm completely aware of how legal it is, Morty.",
+  "You can't unpoop that turd, Morty",
+  "That was dark man. Real dark.",
+  "This is bad, Morty. This is real bad.",
+  "We've gotta go now and never look back! We'll start a new life!",
 ]
 
 morty_smith = [
   "You are a monster! You are like Hitler, only Hitler cared about Germany or something.",
+  "It just feels a little on the nose, you know? I dunno, just forget it.",
+  "Aw, come on. I didnt mean anything!",
+  "I thought you said this was on the up and up!",
+  "I do just fine, not that it's any of your business, Okay?!",
+  "You know, he didn't seem like a bad guy, Rick.",
+  "I dunno Rick, this all feels a little off, you know?",
+  "I dont like where this is going...",
+  "Aw Geez! W-W-What's happening?",
 ]
 
 jerry_smith = [
   "Since we are fighting, if you ever have an affair with that guy I will come to the hotel   room and blow my brains out all over your naked bodies.",
+  "My children are upsairs! Just let me live!",
+  "This is too much, will you make it stop??!,
+   :rick_sanchez: I'll think about it Jerry. I'll think about it.
+  ",
 ]
 
 module.exports = (robot) ->
