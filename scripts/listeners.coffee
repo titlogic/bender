@@ -464,49 +464,12 @@ module.exports = (robot) ->
     if Math.random() < 0.2
       msg.send msg.random response
 
-  # Rick & Morty
-  robot.hear /(rick|morty|existence|science|scientist|future|burp|alcohol|travel|jew|burp)/i, (msg) ->
+  robot.hear /(horse|BoJack)/i, (msg) ->
     response = [
-      "All right, all right, cool it! ",
-      "... you have to understand that as far as Grandpa's concerned, you're both pieces of shit! Yeah. I can prove it. mathematically",
-      "What about the reality where Hitler cured cancer, Morty?",
-      "Weddings are basically funerals with cake.",
-      "Glip Glop? It's like the N word and the C word had a baby and it was raised by all the bad words for Jews... WHAT UP MY GLIP GLOPS!!!",
-      "You're young, you have your whole life ahead of you, and your anal cavity is still taut yet malleable. ",
-      "That's planning for failure.... even dumber than regular planning. ",
-      "Nobody exists on purpose. Nobody belongs anywhere. Everybody’s gonna die. Come watch TV?",
-      "Sometimes science is a lot more art than science. A lot of people don't get that.",
-      "Wubba lubba dub dub!",
-      "I'm gonna need em waaaaaaaay up inside your butthole. ",
-      "Lick lick lick my balls! Ahahahah Yaeh. ",
-      "Yeah, well, scientifically, traditions are an idiot thing.",
-      "Get your shit together! Get it all together, and put it in your backpack. take it to the store and sell it or put it in the shit museum. I dont care what u do just gotta get it together! ",
-      "I'm gonna need you to take your opinion and shove it waayyyyyyyy up inside your butthole. ",
-      "There is no god summer, gotta rip that bandaid off right now.",
-      "gee morty if you twist the words around enough you can make anything sound bad",
-      "That’s just slavery with extra steps",
-      "I call it, a floogle crank",
-      "I made a bomb. I'm gonna drop the bomb. We'll get a nice fresh start.",
-      "This was a wonderful breakfast Beth. You really made the crap out of those eggs. I wish your mother was here to eat them.",
-      "*burrrp*",
-      "I ... *burrrp* ",
-      "*burrrp* ... *buuurrp*",
-      "You have to do it for grandpa Morty. You gotta put these seeds up your butt. Come on Morty.",
-      "Did u get those seeds up your butt?",
-      "Its gonna be great Marty *buuurp* all kinds of Science.",
-      "The flarp zone is for flaping and unflarping only. ",
-      "Good thinking! The student becomes the teacher.",
-      "I gotta get you outta here, u gotta get those seeds outta your ass.",
-
-      # Jerry
-      "Since we are fighting, if you ever have an affair with that guy I will come to the hotel   room and blow my brains out all over your naked bodies.",
-
-      # Morty
-      "You are a monster! You are like Hitler, only Hitler cared about Germany or something.",
+      "He tore my treeshouse down when I was at summer camp becuse instead of using christian nails I used screws, which he called Jew nails."
     ]
-
-    if Math.random() < 0.2
-      msg.send "> :rick:  " + msg.random response
+    if Math.random() < 0.5
+      msg.send msg.random response
 
 
 
